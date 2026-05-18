@@ -382,6 +382,16 @@ export function Projects() {
         </motion.div>
       </div>
 
+      {/* LinkedIn Feed */}
+      <div className="max-w-7xl mx-auto px-6 mt-24 pb-8">
+        <div className="mb-10 border-t border-border/40 pt-16">
+          <span className="text-[10px] uppercase tracking-widest text-muted-foreground">LinkedIn</span>
+          <h3 className="text-2xl md:text-3xl font-display mt-2 mb-2">Latest Posts</h3>
+          <p className="text-muted-foreground font-light text-sm">Updates, learnings, and project highlights from my LinkedIn.</p>
+        </div>
+        <div className="elfsight-app-f03bc397-e161-4707-925a-5655ca21777d" data-elfsight-app-lazy></div>
+      </div>
+
       <AnimatePresence>
         {selectedProject && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 md:p-12">
