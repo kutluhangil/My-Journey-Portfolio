@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
-import Notes from "./pages/Notes";
 import Now from "./pages/Now";
 import Uses from "./pages/Uses";
 import { Navigation } from "@/components/Navigation";
@@ -29,9 +28,6 @@ function Router() {
             <PageTransition>
               <Blog />
             </PageTransition>
-          </Route>
-          <Route path="/notes">
-            <Notes />
           </Route>
           <Route path="/now">
             <PageTransition>
