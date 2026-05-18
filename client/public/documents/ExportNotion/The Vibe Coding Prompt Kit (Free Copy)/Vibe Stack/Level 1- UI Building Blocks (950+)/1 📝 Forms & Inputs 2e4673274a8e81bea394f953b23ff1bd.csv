@@ -1,0 +1,113 @@
+﻿#,UI Name,Description
+1,Text Input Field,A single‑line box where users can type anything from names to short notes.
+2,Password Input Field,A secure text box that masks what users type so others can’t read the password.
+3,Email Input Field,A text box that checks for a valid @‑formatted address as the user types.
+4,Number Spinner,Up‑ and down‑arrow controls that let users nudge a numeric value one step at a time.
+5,Search Input,A text box with a magnifying‑glass icon for quick look‑ups.
+6,Multiline Textarea,"A larger box that lets users write paragraphs, comments, or longer messages."
+7,Rich‑Text Editor,"A formatting toolbar and text field where users can bold, list, or link their content."
+8,Checkbox,A small square that users tick or untick to say “yes” or “no” to an option.
+9,Radio Button Group,A set of round options where choosing one automatically unselects the others.
+10,Toggle Switch,A sliding on/off control that works like a light switch for settings.
+11,Select Dropdown,"A collapsed list that opens to reveal choices, then shows the one picked."
+12,Multi‑Select Dropdown,A dropdown that lets users choose several items and often shows them as tags.
+13,Date Picker,A mini calendar pop‑up for selecting a specific day without typing.
+14,Date‑Range Picker,Two linked calendars that capture a start and end date in one smooth interaction.
+15,Time Picker,A scroll or dial control where users choose an exact hour and minute.
+16,Color Picker,A palette or slider that lets users pick any shade and returns its hex value.
+17,File Upload Button,Opens the device’s file browser so users can attach documents or images.
+18,Drag‑and‑Drop Upload Zone,A dashed‑border box where users simply drag files in to start uploading.
+19,Single‑Value Slider,A horizontal bar with a knob users slide to pick a value like volume or brightness.
+20,Stepper Input (Up/Down),A compact field with “+” and “–” buttons that increment numbers cleanly.
+21,Tag Input with Chips,An input that turns typed words into small pill‑shaped tags.
+22,Autocomplete Input,"Starts suggesting results as the user types, saving time and reducing typos."
+23,Address Autocomplete Field,Pulls real street suggestions while typing so addresses are accurate and fast.
+24,Phone Input with Country Selector,Combines a flag dropdown with a masked phone field to capture numbers correctly.
+25,Currency Input Field,Automatically adds currency symbols and thousand separators while the user types.
+26,Credit‑Card Number Field,Spaces digits in the right pattern and shows the card type as soon as it’s recognized.
+27,Expiration‑Date Picker,A small month‑and‑year dropdown pair tailored for credit‑card expiry dates.
+28,CVV Input,A tiny masked box for the 3‑ or 4‑digit security code on payment cards.
+29,Captcha Checkbox,A “I’m not a robot” box that reduces spam with a single click.
+30,Invisible reCAPTCHA Token,Runs quietly in the background to verify humans without extra steps.
+31,Hidden Input Field,Stores behind‑the‑scenes values that a form needs but users don’t change.
+32,Rating Stars Input,Lets users tap one to five stars to rate products or experiences.
+33,Emoji Picker,Pops up a browsable set of emojis and inserts the chosen one into text.
+34,Password Strength Meter,A colored bar that judges how strong the typed password is in real time.
+35,Confirmation Checkbox (“I agree”),A required tick box used for terms of service or privacy consent.
+36,Masked ID Input,Formats sensitive numbers (like SSNs) with helpful dashes while typing.
+37,URL Input Field,Validates that the entry begins with http:// or https:// for working links.
+38,Markdown Editor,A split‑view box where users write markdown and see a live preview.
+39,Signature Pad,A blank canvas where users draw their signature with a mouse or finger.
+40,Boolean Toggle (Yes/No),A simple two‑state switch labeled “Yes” and “No” for binary decisions.
+41,Image Crop Upload,Lets users resize and crop a picture before saving it.
+42,Dual‑Handle Range Slider,"Users drag two knobs to set a minimum and maximum value, like price range."
+43,Progress Stepper,Shows numbered steps and highlights the current one to guide multi‑page forms.
+44,Consent Radio Pair,Two radio buttons (“Allow” / “Deny”) used for permissions or preferences.
+45,Secret‑Key Reveal Input,Hides sensitive tokens until the user clicks “Show” to copy them.
+46,File‑Preview Input,Displays a thumbnail or filename of uploaded files before the form is sent.
+47,OTP Code Boxes,Six small boxes that each hold one digit of a one‑time passcode.
+48,Slider with Tick Marks,"A slider that snaps to fixed points, showing small ticks for each step."
+49,Character Counter Field,Shows how many characters remain as users type tweets or SMS messages.
+50,Dynamic Field Repeater,"Lets users add or remove identical input rows, like multiple email addresses."
+51,Floating Label Text Field,The label starts as placeholder text and smoothly floats above once the user begins typing.
+52,Inline Validation Message,Real‑time feedback that appears right beneath an input to show errors like “Email required.”
+53,Input with Icon Prefix,"A text box that shows a small icon (e.g., @ or $) inside the field to hint at expected content."
+54,Input with Icon Suffix,Places an icon (like an eye or calendar) at the end of the field to clarify its purpose.
+55,Clearable Search Field,Adds an “×” button inside the search box so users can wipe text in one click.
+56,Debounced Search Input,"Waits a short moment after typing stops before firing the search, cutting server calls."
+57,Autosizing Textarea,"Grows taller automatically as the user writes, so no scroll bars appear."
+58,Character‑Limited Textarea,Shows the maximum allowed characters and counts down while the user types.
+59,Avatar Upload Button,Lets users pick a profile photo and instantly shows a circular preview.
+60,Image Cropper Upload,Opens a simple crop tool so users can trim and zoom photos before saving.
+61,Progress Bar File Upload,Displays a live bar that fills up as the chosen file uploads.
+62,Multi‑File Uploader,Accepts several files at once and lists each with its own progress indicator.
+63,Chunked File Upload,Splits large files into smaller chunks to improve reliability on slow networks.
+64,QR Code Scanner Input,"Activates the camera, reads a QR code, and autofills the decoded text."
+65,Barcode Scanner Field,Uses the device camera to read barcodes and drop the value into an input.
+66,Voice‑to‑Text Dictation,A microphone button that converts spoken words into text in real time.
+67,Map Address Picker,Opens an interactive map where users drop a pin and the address fills automatically.
+68,Geolocation Consent Switch,A yes/no toggle asking permission to use the device’s current location.
+69,Pin Drop Coordinate Input,Captures precise latitude and longitude when users click a point on the map.
+70,Rating Slider (1‑10),A horizontal bar where users drag a knob to select a score between 1 and 10.
+71,Likert Scale Selector,Presents five labeled buttons (Strongly Disagree → Strongly Agree) for quick surveys.
+72,Smiley Rating Picker,Uses expressive face icons to let users choose their mood or satisfaction level.
+73,Net Promoter Score Buttons,Shows numbers 0‑10 in a row for easy NPS feedback.
+74,Segmented Control,A pill‑shaped bar divided into two or three segments acting like exclusive tabs.
+75,Checkbox Button Tile,"A square card that toggles on/off when clicked, much larger than a standard checkbox."
+76,Toggle Pill Switch,A rounded pill that slides left/right to represent off/on states.
+77,Password Visibility Toggle,An eye icon that reveals or hides password characters on demand.
+78,Password Generator Button,Creates a random strong password and drops it into the field with one click.
+79,Secure Note Field,A masked multiline box for sensitive notes—content stays blurred until “Show” is tapped.
+80,Single‑Choice Chip Set,"Small, rounded chips where selecting one deselects the rest—great for categories."
+81,Multi‑Choice Chip Set,"Chips that stay active as you tap additional ones, perfect for tag selection."
+82,Checkbox List with “Select All”,A vertical list of checkboxes plus a top option that toggles every item.
+83,Inline Date Input,A compact field where users type a date in MM/DD/YYYY format with auto‑slashes.
+84,Timezone Dropdown,Lists regions like “GMT+3 — Nairobi” so users can pick their local zone.
+85,Country Selector,"Shows a searchable list of countries, often with flags for quick visual scanning."
+86,Region/State Selector,"Populates a second dropdown after country is chosen, narrowing to local regions."
+87,Dual‑Handle Budget Slider,Lets users drag two ends to set a minimum and maximum spend range.
+88,Gradient Color Picker,Combines two color pickers and a preview bar to craft smooth gradients.
+89,Image Gallery Picker,Opens the device gallery and allows selecting multiple photos at once.
+90,File Type Filter Upload,Limits selectable files to specific types like PDFs or images before browsing.
+91,Honeypot Hidden Field,"An invisible input that traps bots—if it’s filled, the form flags as spam."
+92,Captcha Image Puzzle,Shows a small jigsaw‑style image puzzle users slide together to prove they’re human.
+93,One‑Time Passcode Boxes,Six tidy boxes that auto‑move focus as each digit of an OTP is entered.
+94,Character Counter Badge,A tiny badge next to the field that updates with remaining characters.
+95,Dynamic Field Repeater,Adds or removes identical input rows—useful for extra phone numbers or links.
+96,Step Wizard Progress Bar,Displays numbered steps across the top and highlights the current one in multi‑page forms.
+97,Form Hint Tooltip,A small “?” icon that reveals extra guidance when hovered or tapped.
+98,Inline Help Popover,Pops a short explanation bubble beside the field without leaving the page.
+99,Address Formatter Preview,"Shows how the entered street, city, and zip will look on a mailing label in real time."
+100,Masked Currency Field,Automatically adds commas and decimal places while typing amounts.
+101,Drag‑and‑Drop Reorder List,Lets users drag list items up or down to define a custom order within the form.
+102,Form Error Summary Banner,A colored bar at the top of the page that lists every validation mistake after submission and links users back to each field.
+103,Success Toast Notification,A small pop‑up that briefly appears in the corner confirming the form was saved or sent.
+104,Required Field Indicator,An automatic red asterisk (with aria‑required) added to labels so users know which inputs are mandatory.
+105,Screen‑Reader‑Only Label,A hidden text label that pairs with icon‑only inputs to keep them understandable for assistive technology.
+106,Fieldset with Legend,A visual box that groups related inputs under a titled legend like “Billing Address.”
+107,Collapsible Form Section,"An accordion panel that hides or reveals long sets of fields, keeping multi‑step forms tidy."
+108,Matrix Rating Table,"A grid where each row is a statement and each column is a rating option (e.g., 1–5), so surveys stay compact."
+109,Spreadsheet‑Like Grid Input,An editable table that lets users type straight into cells to add multiple rows of data quickly.
+110,Date‑Masked Input,Forces an MM/DD/YYYY pattern and auto‑inserts slashes so dates are always valid.
+111,Time‑Masked Input,"Guides users to enter hours and minutes in HH:MM format, adding the colon for them."
+112,Postal‑Code Masked Input,Automatically capitalizes letters and adds the right spacing for locale‑specific ZIP or post codes.

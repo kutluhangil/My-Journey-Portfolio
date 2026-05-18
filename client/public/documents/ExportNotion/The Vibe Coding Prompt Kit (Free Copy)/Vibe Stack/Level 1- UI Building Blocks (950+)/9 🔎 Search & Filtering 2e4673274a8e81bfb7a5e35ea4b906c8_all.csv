@@ -1,0 +1,46 @@
+﻿Name,Description,ID
+Inline Search Field (Table),Small magnifier input confined to a data‑table header.,2
+Load‑More Button,Manual button to append additional results—alternative to infinite scroll.,33
+Result Count Badge,Text like “98 results” updating live as filters change.,30
+Tag Filter Chips (Multi‑Select),"Row of chips that toggle active state, visible above results.",19
+Sort‑By Dropdown,"Menu offering “Relevance”, “Newest”, “Price ↑/↓”.",29
+Search Results List (Row),"Vertical list of results with title, snippet, and metadata.",10
+Voice Search Button,Microphone icon triggering speech‑to‑text query input.,6
+Recent Searches List,Dropdown section showing the last few queries for quick reuse.,4
+Autosuggest Dropdown,"List of best‑match items appearing as users type, with keyboard navigation.",3
+Toggle Switch Filter,On/off switch such as “Free Shipping” or “Open Now.”,24
+Advanced Search Link,Text link opening a modal with additional field‑specific filters.,7
+Saved Search Button,Star icon saving the query and filters for later one‑click access.,27
+Filter Drawer (Mobile),"Off‑canvas panel opened by “Filters” button, optimized for phone screens.",16
+Did‑You‑Mean Tooltip,Inline suggestion under search bar offering alternate spelling.,39
+No‑Results Illustration,"Friendly image plus suggestions (“Check spelling, try fewer filters”).",13
+Query Builder UI,Visual tool letting users add rows of field / condition / value without typing SQL.,9
+Pagination Bar,Page numbers with next/prev arrows below results.,31
+Search Results Grid (Card),Masonry or equal‑height cards showing images and titles.,11
+Search‑Within‑Results Input,Secondary search bar that narrows current result set only.,26
+Search Operator Cheatsheet Popover,"“?” icon listing boolean operators (AND, OR, ”exact”).",8
+Saved Search List Modal,Popup showing all saved searches with edit and delete icons.,28
+Popular Searches Chips,Clickable pill buttons under the bar suggesting trending queries.,5
+Bulk Filter Apply Button,"Instead of auto‑apply, a primary button applies selected filters at once.",44
+Color Swatch Filter,Row of colored circles usable for apparel or design assets.,22
+Fuzzy Match Slider,Slider adjusting similarity threshold from strict to loose matching.,42
+Radio Button Filter,Single‑choice list—for mutually exclusive options like “In stock only.”,21
+Active Filters Bar,Horizontal list of currently applied filters as chips with “×” remove icons.,34
+Star‑Rating Filter Row,Five stars row; clicking filters to that rating and above.,23
+Checkbox List Filter,"Scrollable list where multiple values (e.g., brands) can be checked.",20
+Recommendation Block (“Related Searches”),Carousel of suggested queries at bottom of results page.,38
+Real‑Time Result Preview,Dropdown pane under the bar showing live matched items before hitting Enter.,40
+Clear All Filters Link,One‑click action resetting all facets to default.,35
+Faceted Filter Sidebar,"Stacked accordion of categories, brands, price, etc., with counts.",15
+Search History Chip Cloud,Visual cluster of the user’s frequent queries for quick re‑selection.,43
+Hierarchical Category Tree Filter,Expandable nested list letting users drill into category levels.,25
+Spell‑Correction Banner,Small banner stating “Showing results for _laptop_ (searched for _lapotp_)”.,14
+Numeric Range Slider,"Dual‑handle slider for parameters like price, rating, distance.",17
+Date‑Range Picker Filter,"Two‑calendar popover selecting start/end dates, updates result set instantly.",18
+Infinite Scroll Loader,Spinner at bottom that auto‑fetches the next page of results.,32
+Collapsible Facet Section,Each filter group can collapse to keep the sidebar tidy on smaller screens.,45
+Global Search Bar,Prominent top‑bar input with placeholder text (“Search everything…”).,1
+Result Highlight Mark,Yellow background on keywords inside result snippets.,12
+Search Insight Panel,"Collapsible side panel summarizing top categories, brands, and price ranges in current results.",37
+Synonym Match Toggle,"Checkbox to include synonyms, widening or narrowing results.",41
+Sticky Filter Summary (Mobile),Small bar on mobile showing “3 Filters” and a “Sort” button while scrolling.,36

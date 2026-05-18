@@ -1,0 +1,5 @@
+# Üçüncü Taraf Entegrasyonları (Third-Party Integrations)
+
+Web uygulamaları genellikle e-posta gönderimi, dosya depolama, SMS gönderimi, haritalar veya kargo hizmetleri gibi üçüncü taraf entegrasyonlarına ihtiyaç duyar. Bu işlevsellikler iş mantığından ayrı tutulmalı ve genel isimler altında soyutlanmalıdır (**sendEmail**, **saveFile**, **getFile** gibi). Bu yaklaşım, bir üçüncü taraf sağlayıcının değişmesi durumunda yapılması gereken güncellemelerin yalnızca bir noktada gerçekleştirilmesine olanak tanır. Doğru bir planlama ile, bu tür değişiklikler hızlı ve sorunsuz bir şekilde yapılabilir.
+
+Bu bölümde, modern web uygulamalarının genel yapısını, bileşenlerin işlevlerini ve her bir katmanın ne işe yaradığını ele aldık. Her bir bileşenin doğru bir şekilde organize edilmesi, uygulamanın esneklik ve sürdürülebilirlik açısından başarılı olmasını sağlar.

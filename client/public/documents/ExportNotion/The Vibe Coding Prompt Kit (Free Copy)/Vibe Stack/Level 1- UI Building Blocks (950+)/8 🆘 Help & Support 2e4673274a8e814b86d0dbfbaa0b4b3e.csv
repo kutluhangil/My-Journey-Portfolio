@@ -1,0 +1,41 @@
+﻿#,UI Name,Description
+1,Help Icon Button,Small “?” or life‑ring icon that opens the main support menu.
+2,Contextual Tooltip Hint,Tiny hover/focus bubble explaining what a specific field or feature does.
+3,Inline Help Popover,"Rich popover with short text, links, and “Learn more” after clicking the help icon."
+4,Field‑Level Validation Message,Red text under an input explaining exactly why the value is invalid.
+5,Form Error Summary Banner,Sticky red bar listing all errors after a failed submission with anchors to each field.
+6,Success Confirmation Toast,Green toast stating “Saved successfully” that fades after a few seconds.
+7,Info Toast Notification,Neutral toast for non‑critical tips like “Draft autosaved.”
+8,Warning Toast,"Yellow toast alerting users to potential issues—e.g., “Connection slow.”"
+9,Support Drawer,"Slide‑in panel containing FAQs, contact links, and live‑chat button."
+10,Live‑Chat Bubble Widget,Floating button that expands into a real‑time chat window with support agents.
+11,Bot Chat Starter Prompt,"Pre‑filled quick‑reply chips (“Reset password”, “Billing”) kicking off AI chat flows."
+12,Knowledge‑Base Search Bar,Autocomplete search that surfaces articles as users type.
+13,Article List (KB),"Card or table list of help articles with categories, dates, and view counts."
+14,FAQ Accordion Section,Collapsible Q&A list devoted to common support questions.
+15,Troubleshooting Guide Table,Two‑column table mapping issue symptoms to quick fixes.
+16,Community Forum Thread List,Paginated list of posts with tags and reply counts.
+17,Sticky “Submit Ticket” Button,Prominent button hovering at page edge linking to ticket form.
+18,Support Ticket Form,"Collects subject, category dropdown, description textarea, and file attachment."
+19,File Attachment Preview,Shows thumbnails of screenshots or logs attached to support tickets.
+20,Ticket Confirmation Page,"Displays reference number, expected response time, and “See my tickets” link."
+21,Ticket Status Badge,"Colored label (Open, Pending, Closed) shown in ticket lists."
+22,Ticket List Dashboard,Table of user’s tickets with filters for status and date.
+23,Service‑Status Banner,Colored strip at top announcing downtime or degraded performance.
+24,Public Status Page Widget,Embed showing real‑time uptime metrics and incident history.
+25,Incident Post‑Mortem Card,Link to detailed incident report with timeline and remediation steps.
+26,Release Notes Drawer,Slide‑over panel summarizing latest feature updates and fixes.
+27,Contact Us Page Card,"Card listing email, phone, office hours, and social support channels."
+28,Callback Request Form,Short form scheduling a phone call with support at preferred time.
+29,Call‑Center Wait‑Time Estimator,"Text that updates with estimated wait (e.g., “≈ 3 minutes”)."
+30,On‑Hold Music Player,Audio player widget users can pause during web‑call waits.
+31,User Feedback Rating Bar,Five selectable emoji faces rating overall support experience.
+32,Post‑Chat Survey Modal,Small modal popping after chat ends asking NPS or star rating.
+33,Docs Sidebar Navigation,Sticky sidebar of headings for long technical documentation.
+34,Code Sample Copy Button,1‑click clipboard icon on code blocks in developer docs.
+35,Version Switcher Dropdown (Docs),"Allows users to jump between v1, v2, beta documentation sets."
+36,Keyboard Shortcut Cheatsheet Link,Link opening overlay listing all hotkeys for power users.
+37,Accessibility Statement Page Link,Footer link detailing compliance and contact process for accessibility feedback.
+38,Release‑Notes Badge (“New”),Tiny pill beside a menu item signaling new docs or updates.
+39,Feedback Widget Sidebar Tab,Vertical tab labeled “Feedback” that expands into a suggestion form.
+40,Bug‑Report Screenshot Annotator,"Tool letting users capture screen, draw, and send annotated bug reports directly."

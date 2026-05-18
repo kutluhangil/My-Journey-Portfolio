@@ -1,0 +1,41 @@
+﻿UI Name,#,Description
+Live‑Chat Bubble Widget,10,Floating button that expands into a real‑time chat window with support agents.
+Support Drawer,9,"Slide‑in panel containing FAQs, contact links, and live‑chat button."
+Ticket Confirmation Page,20,"Displays reference number, expected response time, and “See my tickets” link."
+Ticket List Dashboard,22,Table of user’s tickets with filters for status and date.
+Bug‑Report Screenshot Annotator,40,"Tool letting users capture screen, draw, and send annotated bug reports directly."
+Warning Toast,8,"Yellow toast alerting users to potential issues—e.g., “Connection slow.”"
+Keyboard Shortcut Cheatsheet Link,36,Link opening overlay listing all hotkeys for power users.
+Public Status Page Widget,24,Embed showing real‑time uptime metrics and incident history.
+Support Ticket Form,18,"Collects subject, category dropdown, description textarea, and file attachment."
+Docs Sidebar Navigation,33,Sticky sidebar of headings for long technical documentation.
+FAQ Accordion Section,14,Collapsible Q&A list devoted to common support questions.
+Success Confirmation Toast,6,Green toast stating “Saved successfully” that fades after a few seconds.
+Code Sample Copy Button,34,1‑click clipboard icon on code blocks in developer docs.
+Field‑Level Validation Message,4,Red text under an input explaining exactly why the value is invalid.
+Release Notes Drawer,26,Slide‑over panel summarizing latest feature updates and fixes.
+Help Icon Button,1,Small “?” or life‑ring icon that opens the main support menu.
+Post‑Chat Survey Modal,32,Small modal popping after chat ends asking NPS or star rating.
+Knowledge‑Base Search Bar,12,Autocomplete search that surfaces articles as users type.
+Callback Request Form,28,Short form scheduling a phone call with support at preferred time.
+Community Forum Thread List,16,Paginated list of posts with tags and reply counts.
+File Attachment Preview,19,Shows thumbnails of screenshots or logs attached to support tickets.
+Accessibility Statement Page Link,37,Footer link detailing compliance and contact process for accessibility feedback.
+Call‑Center Wait‑Time Estimator,29,"Text that updates with estimated wait (e.g., “≈ 3 minutes”)."
+Incident Post‑Mortem Card,25,Link to detailed incident report with timeline and remediation steps.
+Ticket Status Badge,21,"Colored label (Open, Pending, Closed) shown in ticket lists."
+Form Error Summary Banner,5,Sticky red bar listing all errors after a failed submission with anchors to each field.
+Contact Us Page Card,27,"Card listing email, phone, office hours, and social support channels."
+Inline Help Popover,3,"Rich popover with short text, links, and “Learn more” after clicking the help icon."
+Feedback Widget Sidebar Tab,39,Vertical tab labeled “Feedback” that expands into a suggestion form.
+On‑Hold Music Player,30,Audio player widget users can pause during web‑call waits.
+Sticky “Submit Ticket” Button,17,Prominent button hovering at page edge linking to ticket form.
+Version Switcher Dropdown (Docs),35,"Allows users to jump between v1, v2, beta documentation sets."
+User Feedback Rating Bar,31,Five selectable emoji faces rating overall support experience.
+Article List (KB),13,"Card or table list of help articles with categories, dates, and view counts."
+Troubleshooting Guide Table,15,Two‑column table mapping issue symptoms to quick fixes.
+Info Toast Notification,7,Neutral toast for non‑critical tips like “Draft autosaved.”
+Release‑Notes Badge (“New”),38,Tiny pill beside a menu item signaling new docs or updates.
+Bot Chat Starter Prompt,11,"Pre‑filled quick‑reply chips (“Reset password”, “Billing”) kicking off AI chat flows."
+Contextual Tooltip Hint,2,Tiny hover/focus bubble explaining what a specific field or feature does.
+Service‑Status Banner,23,Colored strip at top announcing downtime or degraded performance.

@@ -1,0 +1,6 @@
+# In a land divided between elemental kingdoms, you are an elemental mage with the power to control fire. Describe your efforts to maintain balance and prevent war.
+
+Archive: No
+Tried: No
+Category: Exploring, Hobby
+Sub-Category: Fantasy Role-Playing

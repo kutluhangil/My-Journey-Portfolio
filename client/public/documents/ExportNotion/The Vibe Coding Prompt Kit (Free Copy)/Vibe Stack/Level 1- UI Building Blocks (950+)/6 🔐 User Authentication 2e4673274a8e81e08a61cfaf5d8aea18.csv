@@ -1,0 +1,56 @@
+﻿#,UI Name,Description
+1,Login Page Form,Standard two‑field form (email/username + password) with a “Remember me” checkbox and submit button.
+2,Registration Page Form,"Collects name, email, password, and confirm‑password, plus an optional terms‑of‑service checkbox."
+3,Password Strength Meter,Colored bar beneath the password field that updates from “Weak” to “Strong” in real‑time.
+4,Password Visibility Toggle,Eye icon inside password input that switches masking on and off.
+5,Forgot‑Password Request,Single email field plus “Send reset link” button.
+6,Reset‑Password Form,New‑password + confirm‑password fields shown after following a reset link.
+7,Magic‑Link Login Page,Email field that sends a one‑click sign‑in link instead of asking for a password.
+8,Two‑Factor Code Entry,Six one‑digit boxes for typing an SMS or authenticator‑app code.
+9,Backup Code Download Panel,Shows a list of one‑time backup codes with a “Download as TXT” button.
+10,Device Approval Dialog,"Modal prompting to approve or deny a new device sign‑in, often with location info."
+11,Security Question Step,Dropdown to pick a question plus answer field—used as fallback verification.
+12,Single Sign‑On (SSO) Redirect Button,Large “Sign in with SSO” button that triggers a corporate identity provider flow.
+13,Social Login Button Set,"Row of branded buttons (Google, Apple, GitHub) for quick third‑party sign‑in."
+14,CAPTCHA Challenge Box,Embedded reCAPTCHA widget verifying the user is not a bot.
+15,Invisible reCAPTCHA Token,Background captcha that validates quietly without extra user action.
+16,Account‑Locked Screen,Full page explaining the account is locked after too many failed attempts and offering support contact.
+17,Email Verification Banner,Dismissible bar reminding users to confirm their email with a “Resend link” action.
+18,Resend Verification Email Form,"Simple email input + resend button, used when the original verification link expired."
+19,Session Timeout Modal,"Pops up after inactivity, displaying countdown and “Stay signed in” button."
+20,Multi‑Account Switcher Dropdown,Avatar button listing multiple user accounts to switch between quickly.
+21,Profile Avatar Uploader,Circular image placeholder with “Upload / Replace” action during sign‑up.
+22,Username Availability Checker,Inline message showing green check or red error as the user types a desired username.
+23,Terms‑and‑Privacy Modal,Scrollable legal text shown during registration with “I Agree” button.
+24,GDPR Consent Checkbox Group,"Separate checkboxes for marketing, analytics, and personalization consent."
+25,Login With Passkey Button,"WebAuthn‑powered action that uses device biometrics (Face ID, Touch ID) instead of a password."
+26,Authenticator App QR Setup,Displays a QR code users scan in Google Authenticator or Authy to enable 2‑factor codes.
+27,SMS Code Auto‑Detect Field,Mobile‑optimized field that auto‑reads incoming SMS verification codes.
+28,Passwordless Link Sent Page,Confirmation screen instructing users to check their inbox for a magic‑login link.
+29,Email Change Verification Modal,Confirms new email and asks for current password before updating.
+30,Account Deactivation Dialog,Blocking modal explaining consequences with “Deactivate / Cancel” buttons.
+31,Delete Account Confirmation,Requires users to type “DELETE” or their email to confirm irreversible deletion.
+32,Login Success Toast,Brief toast message welcoming the user by name after successful login.
+33,Re‑Auth Password Prompt,Small modal requesting current password before sensitive settings can be changed.
+34,Security Settings Panel,"Tab inside profile showing 2‑FA status, recent logins, and device list."
+35,Recent Login Activity List,"Table of devices, IPs, and timestamps with “Log out remote session” option."
+36,Suspicious Login Alert Email,Template email with “Was this you? Yes / No” links for unfamiliar logins.
+37,Login With Code (Email PIN),Prompts user to enter a 6‑digit code sent to their email instead of a password.
+38,Biometric Prompt Overlay,Native browser prompt requesting fingerprint or face scan for authentication.
+39,Captcha‑less Trust Score Banner,Invisible background check; only displays a banner when extra verification is needed.
+40,Authenticator Recovery CSV Download,Dialog explaining how to save recovery codes as a CSV file for safekeeping.
+41,SSO Domain Discovery Screen,User types corporate email; the page auto‑routes to the correct SAML/OIDC identity provider.
+42,Identity‑Provider Selection List,"Branded buttons for Okta, Azure AD, Google Workspace, etc., letting federated users choose their IdP."
+43,SAML Hand‑Off Spinner Page,Minimal page with company logo and spinner shown while the browser redirects between SP and IdP.
+44,IdP‑Initiated Logout Notice,Full‑page message stating “You’ve been signed out by your organization” with a “Sign In Again” button.
+45,Forced 2‑FA Enrollment Modal,Blocking dialog that requires users to set up MFA before they can proceed inside the app.
+46,Hardware Token Code Entry,Input field tailored for 6‑ or 8‑digit codes generated by YubiKey or RSA tokens.
+47,Smart‑Card / Certificate Login Prompt,Browser‑level dialog requesting a client certificate—common in government or finance sectors.
+48,Step‑Up Authentication Challenge,Modal triggered mid‑session asking for password re‑entry or OTP before accessing high‑risk resources.
+49,Password Rotation Reminder Banner,Yellow strip appearing X days before password expiry with “Change Password” CTA.
+50,Expired Password Reset Workflow,Screen that forces password change upon next login due to policy expiration.
+51,SCIM Provisioning Status Panel,Admin view listing synced users/groups with last‑sync timestamps and error badges.
+52,Role‑Switch Dropdown,"Avatar menu item allowing privileged users to assume another role (e.g., “View as Reader”)."
+53,Delegated OAuth Consent Dialog,"Popup listing requested scopes (“Read email”, “Manage calendars”) with “Allow / Deny”."
+54,Suspicious‑Location Challenge Modal,Warns of unusual login location and asks for extra verification code.
+55,Audit Log Download Panel,Admin overlay offering CSV export of authentication events with date‑range picker.

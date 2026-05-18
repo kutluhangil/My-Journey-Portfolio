@@ -1,0 +1,71 @@
+﻿UI Name,#,Description
+Vertical Navbar (Sidebar Nav),14,Tall column of links on the left or right side for section switching.
+Bulk Actions Toolbar,48,"Appears when multiple items are selected, offering mass delete, move, etc."
+Hotkey Hint Overlay,39,Shows key‑combo hints beside buttons when the user presses “?” or similar.
+Disclosure Triangle,44,Small triangular icon that rotates to show hidden details inline.
+Undo Snackbar,49,Temporary toast message with an “Undo” button after a destructive action.
+Button Toolbar,11,Horizontal row of grouped buttons forming a compact action bar.
+Icon‑Only Button,4,Round or square button that shows just an icon to save space.
+Row Action Menu,47,“⋯” button inside a table row revealing actions specific to that row.
+Drag‑to‑Select List Items,67,"Users click and drag a rectangle to multi‑select items, triggering a bulk‑actions toolbar."
+Auto‑Hide Nav Bar on Scroll,69,Top navigation hides when scrolling down to maximize content and reappears when scrolling up.
+Pills Navigation,29,Rounded pill‑style tabs offering a softer alternative to square tabs.
+Overflow (Kebab) Menu,35,Three‑dot icon revealing less‑frequent actions in a compact list.
+Wizard Progress Bar,26,Linear bar showing current step and remaining steps in a multi‑page flow.
+Dropdown Button,6,Button that opens a menu of additional commands when clicked.
+Section Dot Navigation,64,Fixed vertical stack of dots on the right; clicking a dot scrolls to its corresponding section.
+Horizontal Navbar,13,Top bar containing primary navigation links across the width of the page.
+Accordion Header Toggle,43,Clicking a header expands or collapses its content beneath.
+Pagination Controls,22,"“Previous,” page numbers, and “Next” buttons for stepping through data pages."
+Context (Right‑Click) Menu,18,Small pop‑up list of actions tied to a specific element or selection.
+Command Palette,19,Centered overlay input that lets users type to execute any command quickly.
+Carousel Dots / Thumbnails,42,Small dots or mini images indicating slide position and enabling quick jumps.
+Button Group,10,Two or more related buttons placed side‑by‑side with shared borders.
+Floating “Next Section” Chevron,54,"Down‑arrow button that appears at fold height, smoothly scrolling users to the next content block."
+Mobile Hamburger Menu,15,Collapsed three‑line icon that expands into a full navigation drawer on tap.
+Primary Button,1,"The main, high‑emphasis button used for a page’s single most important action."
+Pull‑to‑Refresh Control,37,Dragging down on a list triggers a refresh animation and data reload.
+Segmented Progress Sidebar,56,"Vertical list of steps with active highlight, guiding users through a multi‑page wizard."
+Stepper Navigation,25,Row of numbered circles guiding users through sequential steps.
+Floating Action Button (FAB),9,Circular button hovering over content—commonly used for “Add” on mobile.
+“Load More” Button,24,Manual trigger that appends another batch of list items below.
+Hold‑to‑Confirm Button,68,Prevents accidental destructive actions by requiring users to press and hold until a ring completes.
+Skip‑to‑Content Link,40,"Hidden link that appears on focus, letting keyboard users jump past nav."
+Sticky Action Bar,33,Bar with primary actions that sticks to top or bottom once the user scrolls past hero.
+Split Button,5,Combines a primary action on the left with a dropdown arrow on the right for extra options.
+Breadcrumb Overflow Menu,53,Collapses middle breadcrumb segments into “…”; clicking reveals the hidden path for long hierarchies.
+Carousel Navigation Arrows,41,Left/right arrows flanking a carousel for manual slide control.
+Tab Overflow Scroller,63,"Arrow buttons appear when tab labels exceed width, letting users scroll the tab strip."
+Accessibility Skip‑Footer Link,66,"Keyboard‑focusable link that jumps directly to the footer, complementing “Skip to Content.”"
+Secondary Button,2,"Lower‑emphasis button that accompanies the primary action (e.g., “Cancel”)."
+Scrollspy Navigation,31,Sidebar links highlight as the user scrolls past corresponding page sections.
+Infinite Scroll Trigger,23,Automatically fetches more content as the user nears the list’s end.
+Toast Action Link,50,"Toast notification featuring a secondary link, e.g., “View details.”"
+Breadcrumb with Dropdown,30,Last breadcrumb segment includes a dropdown to jump among sibling pages.
+Icon Button,3,"Square button with both icon and text, ideal for toolbar actions."
+Flyout Submenu,17,Nested menu that appears on hover or click beside its parent item.
+Back‑to‑Top Button,32,"Small floating button that appears after scrolling, returning users to page top."
+Voice Command Button,65,"Microphone icon that opens speech recognition, executing commands based on spoken keywords."
+Inline Edit Action Icon,46,"Pencil or edit icon appears on hover, enabling quick field editing."
+Contextual Hover Toolbar,51,"A mini row of icons that fades in near selected text or images, offering quick actions like copy or bold."
+Mega Menu,16,"Wide hover menu displaying multiple link columns, images, or promos."
+Swipe‑Down Modal Closer,62,Mobile gesture that dismisses full‑screen modals by swiping down.
+Quick‑Actions Speed Bar,60,"Narrow horizontal bar that appears on hover over table rows, exposing edit, view, duplicate icons."
+Context (Press‑and‑Hold) Preview,57,"Long‑press on mobile shows a peek preview card; releasing navigates, swiping cancels."
+Bottom Navigation Bar,21,Fixed bar with 3‑5 icons at the bottom of a mobile viewport.
+FAB Speed‑Dial Menu,34,FAB expands into several mini‑action buttons when tapped.
+Segmented Control,8,Group of adjacent buttons where only one can be active at a time.
+Side Drawer Menu,20,Off‑canvas panel that slides in from the side to reveal navigation links.
+Inline Delete Chip,59,Tiny “×” button inside tags or pills that deletes the item without extra dialogs.
+Tree Navigation Menu,52,Expandable nested list that lets users drill into multi‑level sections without leaving the sidebar.
+Tabs (Horizontal),27,Row of tab labels that switch between different content panels.
+Gesture Back Navigation,38,Edge swipe on mobile returns the user to the previous screen.
+Tabs (Vertical),28,"Tab labels stacked vertically, useful when horizontal space is limited."
+Expand / Collapse All Button,45,One‑click control toggles every accordion section simultaneously.
+Swipe Actions List Item,36,Swiping a mobile list row reveals contextual actions like delete or archive.
+Breadcrumb Navigation,12,Horizontal trail of links showing the user’s current location hierarchy.
+Jump‑to‑Top/Bottom Buttons,61,Two small arrow buttons allowing instant scroll to page start or end.
+Filter Drawer Trigger Button,55,"Prominent button that slides in a side drawer of filters, common on mobile catalog pages."
+Floating Section Index Bubble,70,Small movable bubble displaying current heading title; clicking opens an index of all sections.
+Toggle Button,7,"Button that stays pressed or unpressed, representing on/off states."
+Keyboard Shortcut Navigator,58,Invisible listener that cycles focus to next/previous sections with Ctrl + Arrow keys.

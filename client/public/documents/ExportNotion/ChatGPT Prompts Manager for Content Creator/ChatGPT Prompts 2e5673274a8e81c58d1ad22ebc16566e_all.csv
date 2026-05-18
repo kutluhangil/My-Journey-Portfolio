@@ -1,0 +1,83 @@
+﻿Name,Notes,Prompt,Type
+Prompt,"Get that info, then create content that solves the problems.","I create content for [description of audience]. Give me 50 problems that this audience might have. Include a mix of practical problems and
+emotional ones.",Content Ideas
+Prompt,"Pick the best questions and create
+content that answers them.","I write for [detailed description of audience]. Give me 50 questions that they might have about [niche/outcome]. Mix simple ones and
+in-depth ones.",Content Ideas
+Prompt,,My instagram account is in [niche]. Create a content calendar for a month.,Content Ideas
+Prompt,,"Re-write the blog and add the relevant SEO keywords to it
+[Paste your blog]",Blog Post
+Prompt,"Copy-paste that list to a doc.
+Then create problem-solving content.","I create content for [description of audience]. What are their top problems, insecurities, and pain
+points?",Content Ideas
+Prompt,,"Write an email with the subject ""You won't believe what we have in store for you"" to promote this product: [insert information about the product or service].",Email Marketing
+Prompt,,"Act as world-class social media expert. I help [target audience] to achieve [goal]. Please create a content strategy that captures the attention  of non-followers and positions me as an expert. Please include educational, entertaining & promotional content. ",Content Strategy
+Prompt,,"Provide me 30 hashtags on [topic] which include large, medium and small hashtag.",Caption & Hashtags
+Prompt,,Write copy for a social media ad campaign targeting [target audience] interested in [service/product].,Product/Service
+Prompt,,"I write for [detailed description of audience and what they want]. Give me 50 ideas for posts that deliver actionable tips. Focus on specific
+strategies, not motivation or mindset.",Content Ideas
+Prompt,,Act like you are a highly experienced social media copywriter. Write an effective post on [details]. The post should be engaging and start with a solid hook to grab the reader’s attention.,Content Ideas
+Prompt,,"Write an email subject line that starts with ""The Real Reason [insert target market] [is attracted to product or topic]"". Then, write an email that elaborates on the reasons why the target market is attracted to the product or topic and provides more information about how the product or service can help them.",Email Marketing
+Prompt,,"I just wrote the start of this post:
+[Title]
+[Point 1, 2, 3] Suggest 10 more list items that fit with the first 3, and write them in a
+similar length and style.",Content Ideas
+Prompt,,"Act as world-class copywriter expert. Create 5 attention-grabbing hooks for [topic]. Each hook should be no more that 15 words and should entice followers to engage with my content. Please write in a simple, fun & professional writing style. Please use the AIDA method!",Content Hooks
+Prompt,,Develop a series of LinkedIn posts sharing industry insights and thought leadership on emerging marketing trends in [topic]. Here’s a list of trends to get started [trends list].,Content Ideas
+Prompt,,Can you provide me with 5 ideas for blog post about [topic],Blog Post
+Prompt,,"This social media post did well: [the
+post]. Identify the factors that made it successful, then come up with 20 post
+ideas that have the same factors. Make them distinctly different from the
+original.",Content Ideas
+Prompt,,"Generate [number] post ideas for [social media platforms] for a [company industry] company, focusing on [company-related topics]. Create [number] Pinterest board ideas for a [company type] company.",Content Ideas
+Prompt,,"I write for [detailed description of audience]. Give me 25 questions they might have, so I can create content that answers their questions. ",Content Ideas
+Prompt,,"Create a monthly social media calendar for this project [project name and details] in a table format. Can you please include post ideas, post timing, post frequency, and engagement strategies in the calendar?",Content Ideas
+Prompt,,Generate a list of at least 20 keywords related to [topic].,Content Strategy
+Prompt,,Analyze the top performing [niche] brands on [platform] and give me top 10 lessons to learn from them.,Content Strategy
+Prompt,Then choose the one that looks most interesting and effective,"I just wrote this post: [the post]. 
+
+Give me 10 first line suggestions that might be better than what I have currently. Make them concise, persuasive and interest-grabbing",Content Ideas
+Prompt,,Write a long caption on [topic] with emojis that sounds like human written,Caption & Hashtags
+Prompt,,Tell me a negative catchy hook for an Instagram post on [topic]. Keep it below 50 characters.,Content Hooks
+Prompt,,Write a TikTok biography for my company. Here’s information about my company [insert information here].,Social Media Bio
+Prompt,,"I sell [product/service]. My audience are [audience] and they are currently struggling with [customer challenges]. I want you to create 10 social media posts highlighting their challenges and providing them with a solution.
+
+The social media post should be divided into 3 parts - Eye-catchy hook, body and a compelling call to action.",Product/Service
+Prompt,"Pick a good idea, then write it from
+your perspective.","Write me 10 social media posts that [famous influencer in your niche] would write. Make them all about [number] words long, and pick the topics based on what that person
+often talks about.",Content Ideas
+Prompt,,Generate ___ captions for an Instagram post on the topic [topic]. Craft the captions for [target audience] and keep a [specify tone] tone. Include quotes and any other elements to make it more interesting.,Caption & Hashtags
+Prompt,,Act as world-class social media expert. I am a [title] in [niche] and I help [audience] to achieve [goals]. Create 30 content ideas for Instagram that speak directly to my audience’s pain points & goals that are actionable and engaging.,Content Ideas
+Prompt,,Write copy for a social media post highlighting a unique use case or application for [service/product].,Product/Service
+Prompt,,"Craft a content calendar with [number] blog post ideas, including these keywords [insert keywords]. Spread the blog posts out across 3 months.",Blog Post
+Prompt,,"Suggest ___ ideas for a social media poll on the [topic] ",Content Ideas
+Prompt,,"I write for [audience]. Their biggest goal is [goal].
+
+Give me 50 post ideas that’ll help them with [goal].
+
+Make them about helpful strategies, not emotions.",Content Ideas
+Prompt,,"Polish this newsletter to improve the tone, style, and structure. Maintain a [specify tone] tone. Keep it under [specify word limit]",Email Marketing
+Prompt,,"Write a catchy caption about [topic] and try to play with words to make it fun, engage users in the end, ask them questions, use relevant emojis.",Caption & Hashtags
+Prompt,That'll give you 100 post ideas.,"I write for [detailed description of audience]. First, list their top 20 pain points. Then, for each pain point, suggest 5 problem-solving content
+ideas.",Content Ideas
+Prompt,,Please share interesting stats about [insert the topic here] that very few people are talking about. Please cite your sources.,Content Research
+Prompt,,"Give me insights of my audience pain points, challenge and goals. My audience is in [niche]",Content Research
+Prompt,,What are the top trends in [industry/niche] in 2024?,Content Research
+Prompt,,Structure an attention-grabbing Instagram carousel post highlighting [insert brand/product features].,Product/Service
+Prompt,,"Act as world-class social media marketing expert. Write Instagram bio that is 3 lines and a maximum of 150 characters for an expert in [topic] who helps [audience] get [result]. Use appropriate emojis & simple, fun & professional language",Social Media Bio
+Prompt,,"Act as world-class social media expert. I am a [title] in [niche] and I help [audience] to achieve [goals]. Create a content strategy that captures of non-followers, positions me as the expert and drivers sales & engagement. ",Content Strategy
+Prompt,,Suggest [number] hashtags about [topic] for my recent Instagram post.,Caption & Hashtags
+Prompt,,Write a list of compelling Call to Actions to sell my [product/service] on [social media platform],Product/Service
+Prompt,,Create a TikTok video idea demonstrating [topic].,Content Ideas
+Prompt,,Act as world-class copywriter expert. I write an Instagram post on [topic]. Please improve the readability and tone and make it more engaging. Please make sure that it is optimized with keywords for SEO!,Content Strategy
+Prompt,75 content ideas. Instantly.,"I write for [audience]. Give me:
+1. ﻿﻿﻿25 questions they might have about [their top goal].
+2. ﻿﻿﻿25 tactical problems problems they have with [goal].
+3. ﻿﻿﻿25 emotional problems problems they have with [goal].
+75 content ideas. Instantly.",Content Ideas
+Prompt,That will give you 10 content baskets and 200 post ideas,"I create content about [broad topic]. Split that up into 10 smaller topics, then give me 20 [preferred platform] post ideas for each smaller topic",Content Ideas
+Prompt,,I'm writing a post about cognitive biases in marketing. Give me 15 that I might include in it.,Content Ideas
+Prompt,,"I am looking to sell a [product/service]. Write me a catchy landing page copy in a well organized way. ",Product/Service
+Prompt,,Write a list of engaging headlines for my blog title [title]. Tone [Friendly/witty/curious/personal],Blog Post
+Prompt,,"Act as world-class media marketing expert. Please write an Instagram caption for [topic] for [target audience] to help achieve [goal]. Please write in a simple, fun & professional writing style. Please use the AIDA method. ",Caption & Hashtags
+Prompt,,"Act as world-class social media expert. I am a [title] in [niche] and I help [audience] to achieve [goals]. Please write an Instagram Bio max. 150 characters, that attracts and converts visitors into followers. Use an emoji at the start of each line and end with a strong CTA.",Social Media Bio

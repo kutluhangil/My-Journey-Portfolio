@@ -1,0 +1,422 @@
+﻿#,UI Name,Description
+1,Hero Section,"A full‑width banner with a bold headline, sub‑headline, and call‑to‑action that greets visitors at the top of a page."
+2,Split Hero Section,A hero layout that places eye‑catching imagery on one side and compelling text on the other for instant context.
+3,Centered Hero with Illustration,"Puts headline, paragraph, and button in the middle of the screen over a soft illustration or pattern background."
+4,Video Hero Background,Features looping video behind headline and button to create an immersive first impression.
+5,Feature Grid (Three‑Column),"Displays three equal columns, each with an icon, short title, and sentence explaining a key feature."
+6,Feature Zigzag Layout,Alternates image and text left‑right in stacked rows to keep long feature lists engaging.
+7,Feature Icon Row,A single horizontal strip of icons with short labels—great for quick capability highlights.
+8,Feature Comparison Table,Side‑by‑side columns that tick or cross features so users can compare plans at a glance.
+9,Bento Grid Layout,"Arranges mixed‑size tiles in a tidy grid, like a Japanese bento box, to showcase varied content pieces."
+10,Pricing Card,"A card with price, plan name, bullet points, and a “Get Started” button."
+11,Pricing Table,Two or more pricing cards aligned in a single row so tiers are easy to contrast.
+12,Pricing Toggle (Monthly / Yearly),Adds a switch atop the pricing area to instantly flip prices between billing cycles.
+13,Statistic Tile,"Shows a big number (e.g., “9.3 K”) with a small label (“Total Users”) to spotlight a metric."
+14,KPI Card,"A box combining a primary metric, trend arrow, and tiny sparkline for quick performance insight."
+15,Count‑Up Number,"Animates from zero up to the final figure, drawing attention to milestones reached."
+16,Progress Bar Indicator,A horizontal bar that fills left‑to‑right to show task completion percentage.
+17,Progress Circular (Ring),"A donut‑shaped ring that fills clockwise, ideal for goal tracking."
+18,Logo Cloud,A responsive block of client or partner logos showing brand trust.
+19,Logo Carousel Slider,Continuously scrolls partner logos in a single horizontal line to save space.
+20,Testimonial Card,"Displays a customer photo, quote, and name to add social proof."
+21,Testimonial Grid,Arranges several testimonial cards in rows for quick scanning.
+22,Testimonial Carousel,"Cycles through testimonials one at a time, keeping the section compact."
+23,Quote Block,Large italic text with em‑dash and author name that draws attention to key statements.
+24,Review Star Summary,Shows an average star rating and number of reviews beneath for instant credibility.
+25,FAQ Accordion,"Stacked questions that expand to reveal answers, keeping long FAQs tidy."
+26,FAQ Grid,Displays questions and answers in two‑column cards for quick side‑by‑side reading.
+27,Call‑to‑Action Banner,A bold colored strip with headline and button urging users to act now.
+28,CTA with Split Image,Pairs a persuasive message on one side and an illustrative image on the other to boost conversions.
+29,Newsletter Signup Bar,A thin strip with email field and button encouraging visitors to subscribe.
+30,Newsletter Signup Card,"A card with catchy headline, short text, and email form—perfect for sidebars or footers."
+31,Blog Post Card,"Shows thumbnail, title, excerpt, and “Read More” link to preview articles."
+32,Blog Post List,"Vertical list of post cards with divider lines, ideal for a news feed."
+33,Blog Masonry Grid,Staggers varying‑height post cards in snug columns without gaps.
+34,Image Gallery Grid,Responsive rows of thumbnails that open to larger views when clicked.
+35,Lightbox Image Viewer,Darkens the page and enlarges the clicked image with next/prev arrows.
+36,Video Embed Block,"Holds a YouTube or Vimeo video in a responsive frame, preserving aspect ratio."
+37,Video Playlist Module,Shows main video on the left and a scrollable list of next videos on the right.
+38,Audio Player Bar,Simple play/pause bar with timeline and timestamp—great for podcasts.
+39,Timeline Vertical,Lists events down a central line with dots and dates to show history or process.
+40,Timeline Horizontal,Spreads milestones across a horizontal line for wide screens.
+41,Step‑by‑Step Process,Numbered blocks that visually guide users through a workflow in order.
+42,Milestone Roadmap,Combines timeline and card layout to show upcoming product milestones.
+43,Content Tabs,Clickable labels that reveal different panels without reloading the page.
+44,Accordion Disclosure,A standalone collapsible section for optional detailed content.
+45,Card with Hover Overlay,Reveals extra details or buttons when the user hovers over the card image.
+46,Flip Card,Rotates 3‑D‑style on hover to show information on the back side.
+47,Profile Card,"Displays user avatar, name, role, and short bio in a compact card."
+48,Team Grid,A layout of profile cards showing multiple team members in equal‑sized tiles.
+49,Article Table of Contents,Lists page headings and highlights the current section while scrolling.
+50,Alert Announcement Bar,A dismissible strip at the very top that broadcasts important news like “We’ve launched v2.0!”
+51,Parallax Hero Banner,"A full‑width hero in which the background image scrolls slower than the foreground text, adding depth to the page top."
+52,Gradient Overlay Hero,Puts a semi‑transparent color gradient over a photo so headline text stays readable on any image.
+53,Skewed Hero Section,"Uses angled background shapes behind the headline and CTA to create a dynamic, modern look."
+54,Curved‑Bottom Hero,Finishes the hero with a gentle SVG wave that visually flows into the next section.
+55,Before‑and‑After Image Slider,Lets users drag a handle to compare two overlaid images—perfect for makeovers or edits.
+56,Feature Checklist Block,A plain list of bullet points each preceded by a green checkmark icon to convey completed capabilities.
+57,Two‑Column Content Block,"Splits the section into equal columns—text on the left, supporting image or video on the right."
+58,Asymmetric Content Block,Uses a 40/60 split between text and media for a more editorial feel.
+59,Content Callout Box,"A colored rectangle that highlights a key fact, quote, or warning within an article."
+60,Icon List Strip,Horizontal row of small icons with short labels—ideal for summarizing quick stats or perks.
+61,Numbered List with Large Numerals,"Displays big, stylized 1‑2‑3 digits alongside short explanations for step‑based content."
+62,Feature Card Carousel,Scrolls a row of feature cards side‑to‑side so users can browse many items in limited space.
+63,Case Study Spotlight,"A card featuring company logo, short success metric, and link to the full story."
+64,Video Testimonial Card,Combines a play‑button overlay with a quote snippet so users can either watch or read praise.
+65,Storytelling Timeline with Images,A vertical timeline where each milestone includes an optional photo for richer context.
+66,Event Calendar List,"A simple chronological list of upcoming events, each with date badge and brief blurb."
+67,Interactive Map Embed,Embeds a zoomable Google Map or Leaflet map that supports custom location markers.
+68,Statistic Donut Chart,A ring chart that shows percentage completion with the numeric value centered inside.
+69,Mini Sparkline Row,"Tiny inline graphs that trail key numbers, useful for showing trends without bulky charts."
+70,Progress Bar Stacked,"A single bar divided into colored segments to represent parts of a whole (e.g., budget allocation)."
+71,Comparison Meter,Visual gauge that points to Low/Medium/High to illustrate qualitative rankings.
+72,Reading Progress Indicator,A slim bar at the top that fills as the reader scrolls through long content.
+73,Article Byline Block,"Shows author avatar, name, publish date, and read‑time estimate just beneath a headline."
+74,Author Bio Snippet,"A small card with author photo, one‑sentence bio, and social links at the end of a post."
+75,Quote Overlay on Image,Places large quotation marks and text over a semi‑darkened background photo.
+76,Highlighted Pull Quote,A standout quote in larger text centered inside surrounding body copy to break monotony.
+77,Statistic Comparison Tiles,Two or three side‑by‑side stat cards with arrows showing which metric went up or down.
+78,Metric Badge with Trend Arrow,Small pill showing a number plus green ↑ or red ↓ arrow for instant performance cues.
+79,Logo Ribbon Overlay,"A diagonal ribbon (e.g., “Beta”, “New”) that sits on the corner of a card or image."
+80,Ribbon Tag List,A vertical string of colored tags enumerating categories or tech stacks next to an article.
+81,Masonry Image Collage,"Interlocks photos of varying heights, creating a scrapbook‑style gallery."
+82,Polaroid‑Style Image Stack,Overlaps square photos with slight rotation and drop shadows for a casual vibe.
+83,Gallery Slideshow Hero,Replaces a static hero background with automatically cycling full‑width images.
+84,Inline Code Snippet Block,Syntax‑highlighted code area with copy‑button—handy for tutorials and docs.
+85,Expandable Code Block,Initially shows only the first few lines of code with a “Show more” toggle.
+86,Data Table with Sort & Filter,A tabular display where clicking headers sorts columns and a top row lets users filter values.
+87,Scrollable Data Table,Keeps table headers fixed while the rows scroll in a constrained box.
+88,Simple Card Deck,"Uniform cards that all share equal height, aligning neatly in responsive rows."
+89,Hover Lift Card,"Card rises slightly and gains a shadow on hover, signaling it’s clickable."
+90,Avatar Stack Row,Overlapping circle avatars that show team members associated with a project.
+91,Avatar Group with Counter,Displays first few avatars plus “+5” badge to indicate additional members.
+92,Testimonial with Star Gradient,Combines a 5‑star rating row above the customer quote to emphasize satisfaction.
+93,Testimonial Video Grid,"Grid of thumbnail videos, each featuring a different customer story."
+94,Social Proof Bar,A slim strip noting “Trusted by 12 000+ designers worldwide” with tiny avatar faces.
+95,Tag Cloud,Visual cluster of category tags sized by popularity—useful for blogs or docs.
+96,Interactive Pie Chart,Hovering a slice reveals a tooltip with exact percentage and label.
+97,Project Roadmap Board,"Kanban‑style column layout showing “Planned, In Progress, Done” ticket stacks."
+98,Comment Thread Block,"Nested comments with avatar, name, timestamp, and reply button—ideal for posts."
+99,Tweet Embed Card,"Displays a live tweet with author info, clickable hashtags, and interaction counts."
+100,Social Share Bar,"Row of platform icons (Twitter, LinkedIn, Facebook) encouraging readers to share content."
+101,Scrolling Narrative Section,"Pins an illustration at center while new text paragraphs fade in as the user scrolls, perfect for product stories."
+102,Full‑Screen Quote Hero,Shows a giant quotation on a plain backdrop that fills the entire viewport for dramatic emphasis.
+103,Press‑Mention Strip,A thin bar cycling “As seen in …” logos to showcase media coverage.
+104,Side‑by‑Side Stat + Image Block,Pairs a large metric on the left with a supporting photo on the right in one tidy row.
+105,Long‑Form Feature Timeline,Alternates full‑width images and copy down the page to tell a chronological story.
+106,Plan Comparison Grid (5 × 5),Scrollable matrix that compares five plans across five feature rows with tick/cross icons.
+107,Plan Comparison Toggle (Annually / Quarterly / Monthly),Adds a three‑way toggle atop the pricing table so visitors can view any billing cycle.
+108,Step‑CTA Combo Block,Shows “1 Choose plan → 2 Create account → 3 Get started” with icons and a final CTA button.
+109,Curved‑Edge Feature Section,Uses a sweeping SVG curve at top and bottom to wrap a features area in a soft shape.
+110,Angle‑Cut CTA Banner,A diagonal‑edged banner in a contrasting color containing headline and button.
+111,Stats Infograph Row,Displays three or four icon‑backed numbers with short captions in one horizontal band.
+112,Story Progress Indicator Bar,A segmented line at top of article showing how many chapters have been read.
+113,Release Notes Panel,Small card summarizing the latest version changes with “Read full log” link.
+114,Milestone Badge Carousel,Horizontally scrollable row of circular milestone icons and dates.
+115,One‑Line Announcement Ticker,Scrolling text ticker announcing promos or news across the top of a page.
+116,Layered Gradient Card,Card with two overlapping gradient backgrounds creating depth beneath the main content.
+117,Tilt‑On‑Hover Card,"Slightly tilts in 3‑D when the cursor moves over it, indicating interactivity."
+118,Radial‑Border Card,"Thin multi‑color ring encircles the card, drawing attention without heavy shadows."
+119,Selectable Bookmark Card,Includes a bookmark toggle in the corner so users can save the item.
+120,Overlay Action Card,Buttons appear over the image portion of the card only when hovered.
+121,Statistic Flip Card,Reveals a context note on the back side when the metric card is clicked.
+122,Depth‑Stack Card Deck,"Three cards overlapped with drop shadows, fanning slightly for a layered look."
+123,Compact CTA Card,"Tiny card with icon, line of text, and arrow chevron that fits into sidebars."
+124,Gradient Shadow Hover Card,Card gains a soft colored shadow on hover instead of moving.
+125,Ribbon‑Tag Card,Card corner shows a folded ribbon reading “Featured” or “Sale.”
+126,Dismissible Tip Card,Helpful hint card with an “×” so users can close and not see it again.
+127,Status Pill Card,"Shows status (Live, Paused, Draft) inside a colored pill at top‑right of card."
+128,Expandable Product Card,Click expands the card downward to reveal extra product details.
+129,Key‑Point Bullet Card,Card lists three check‑mark bullets under its heading for clarity.
+130,Background‑Image Tile,Uses a full‑cover background image with white overlay text atop.
+131,Inbox Preview List,"Each list row shows avatar, sender name, subject line, and unread badge."
+132,Paginated Data Table,Standard table with next/previous buttons and page numbers below.
+133,Draggable Table Rows,Lets users drag rows to reorder priority in a list.
+134,Editable Cell Table,Click any table cell to turn it into an inline text input for quick edits.
+135,Sticky Header & Footer Table,Column titles stay at top and totals row stays at bottom while scrolling rows.
+136,Tree‑View Table,Rows can expand to reveal nested child rows—great for folder hierarchies.
+137,Virtualized Grid,Renders only visible rows/columns to keep huge data sets buttery smooth.
+138,Filter Chip Row,Row of removable chips indicating active table filters.
+139,Alphabetical Contact List,Groups list items under sticky A‑Z headings for easy scanning.
+140,Document List with File Icons,"Shows file‑type icons, names, sizes, and “Download” links in a neat list."
+141,Notification Feed,Timestamped list of events with icons and read/unread styling.
+142,Step Checklist List,Checklist list items each have a tick box to mark task completion.
+143,Activity Timeline Card,Compact card summarizing latest actions with vertical timeline dots.
+144,Drag‑and‑Drop Kanban Board,"Standard lanes where cards move between To Do, Doing, Done."
+145,Tag List Cloud,Alphabetized tags of varying sizes showing popularity.
+146,Waterfall Chart Block,Bars cascade up and down to show cumulative gains and losses.
+147,Bullet Chart Widget,Single horizontal bar with marker showing actual vs. goal.
+148,Tree Map Tile,Nested rectangles sized by value—great for budgets or file sizes.
+149,Heatmap Grid,"Color‑coded squares representing data intensity (e.g., GitHub commit chart)."
+150,Glassmorphism Card,"A translucent, frosted‑glass card that lets background colors softly bleed through for a modern look."
+151,Frosted Glass Hero,Full‑width hero with a blurred glass overlay panel floating above a vivid background image.
+152,Video Hero with Form Overlay,Autoplay video background topped by a brief signup form so visitors can act immediately.
+153,Floating CTA Card,A small call‑to‑action card that hovers above the page corner as users scroll.
+154,Sticky Sidebar Stats Panel,KPI tiles remain fixed on the side while the main article scrolls.
+155,Resizable Column Table,Lets users drag column borders to widen or narrow data fields.
+156,Column Reorder Table,Users can drag a header to rearrange table columns on the fly.
+157,Histogram Chart Block,Vertical bars grouped into bins to show data distribution.
+158,Box‑and‑Whisker Chart,"Visualizes quartiles, medians, and outliers for statistical insight."
+159,Funnel Chart Widget,Tapered layers illustrating conversion drop‑offs through a process.
+160,Sankey Flow Diagram,Ribbon flows showing how quantities split and merge between stages.
+161,Polar Area Chart,Circular chart with equal‑angle spokes where slice radius encodes value.
+162,Bubble Scatter Plot,Scatter plot that sizes each dot by a third data dimension.
+163,Scatter Matrix Panel,Grid of mini scatter plots comparing every variable pair in a dataset.
+164,Violin Plot Chart,Symmetrical density plot highlighting data distribution around medians.
+165,360° Panorama Viewer,Drag‑to‑look experience for immersive panoramic photos.
+166,Image Gallery with Tag Filters,Tag buttons above the gallery instantly filter visible images.
+167,Lightbox Gallery with Thumbnails,Enlarged image view plus a strip of clickable thumbnails beneath.
+168,Video Mosaic Grid,Equal‑sized video thumbnails arranged in a responsive grid.
+169,Live Stream Embed with Chat,"Video stream on the left, real‑time chat feed docked on the right."
+170,Audio Playlist Queue,List of episodes or tracks beneath a mini audio player.
+171,Map Heat Overlay,Color gradients overlay a map to signal density or intensity.
+172,Density Dot Map,Thousands of tiny dots placed on a map to represent dispersed data points.
+173,3D Globe Data Points,Interactive spinning globe with raised spikes marking values.
+174,Geo Bubble Map,Proportional circles plotted on regions to compare magnitudes.
+175,Lottie Animation Placeholder,Lightweight looping vector animation shown while heavy content loads.
+176,Chart Skeleton Placeholder,Greyed‑out axes and bars hint at an incoming chart.
+177,Table Skeleton Rows,Faded table lines that pulse until data arrives.
+178,Skeleton Form Section,Placeholder input boxes and buttons mimicking a pending form.
+179,KPI Tile with Delta Badge,Stat number plus a tiny green ↑ or red ↓ badge indicating change.
+180,KPI Tile with Mini Progress Ring,Metric displayed inside a small circular progress indicator.
+181,Balanced Scorecard Panel,"Four linked KPI boxes—Financial, Customer, Internal, Learning—shown in one block."
+182,Multi‑KPI Progress Row,Inline row of three to five mini progress bars tracking parallel goals.
+183,Traffic Light Status Card,"Red, amber, or green indicator light signals current system status."
+184,Gradient Underline Heading,Large heading whose underline fades seamlessly across two colors.
+185,Decorative Dotted Underline Heading,Subtle dotted line under the title for a magazine‑style accent.
+186,Pattern‑Fill Drop Cap,First letter of a paragraph filled with a geometric pattern.
+187,Gradient Text Block,Line of copy whose letters gradually shift through a color spectrum.
+188,Sticky Progress Step Bar,"Narrow bar fixed to top, marking each page section as completed while scrolling."
+189,Horizontal Step Dots Tracker,Evenly spaced dots with labels that light up as users advance.
+190,Wizard Progress Header,Breadcrumb‑style header naming steps 1‑2‑3 in a multi‑page flow.
+191,Collapsible Card Accordion Stack,Vertically stacked cards that expand to reveal more content.
+192,Card Deck with Snap Scroll,Horizontally scrolling cards that snap cleanly into place.
+193,Hover Gradient Shift Card,Card background smoothly shifts colors when hovered.
+194,Tilt Parallax Image Block,"Image subtly tilts based on cursor position, adding depth."
+195,Multi‑Layer Parallax Section,Three or more background layers move at different speeds during scroll.
+196,Card with Bottom CTA Bar,Persistent button strip locked to the card’s bottom edge.
+197,Horizontal Media Card,Landscape card placing thumbnail on the left and text on the right.
+198,Card with Top Banner,Thin colored ribbon across the card’s top—ideal for “New” or “Sale.”
+199,Overlay Gradient Card Image,Dark gradient overlay on image ensures overlaid text remains legible.
+201,Vertical Split Content Block,"Section split 50/50 vertically—text on one side, media on the other."
+202,Background Video Section,Looping muted clip behind regular content to add subtle motion.
+203,Autoplay Video Tile,"Small video that auto‑plays on hover, pausing when the cursor leaves."
+204,Carousel with Indicator Dots,Slides auto‑advance while dots show current position.
+205,Carousel with Thumbnail Nav,Replaces dots with tiny slide thumbnails for easier navigation.
+206,Infinite Scroll Masonry Grid,Adds new masonry items automatically as users near the page bottom.
+207,Scroll‑Activated Counter,Counter animates from 0 to its value once it scrolls into view.
+208,Rolling Number Animation,Each digit scrolls upward like an odometer to reach its target.
+209,Typewriter Headline Effect,"Headline letters appear one at a time, mimicking typing."
+210,Neon Glow Text Block,Electric glow around text—great for nightlife or cyber themes.
+211,Glitch Text Hero,Slight RGB shift and flicker give the headline a “glitch” effect.
+212,Animated Gradient Background Section,"Slow, looping gradient animation behind the content."
+213,SVG Animated Divider,Moving wave or zig‑zag SVG separating two page sections.
+214,Wave Animation Background,Subtle looping wave pattern behind hero or footer areas.
+215,Particle Canvas Background,Interactive particle dots that drift and connect on hover.
+216,Sticky Note Card,Card styled like a sticky note with a folded corner.
+217,Flip Clock Countdown,"Retro‑style flip tiles counting down days, hours, minutes, seconds."
+218,Rotating Cube Loader,3‑D cube spins in place while data loads.
+219,Segmented Ring Progress,Progress ring divided into equal colored segments marking milestones.
+220,Vertical Timeline with Icons,Events aligned vertically with icon circles and connecting line.
+221,Roadmap Breadcrumb Bar,Horizontal bar showing current milestone plus past and upcoming ones.
+222,Testimonial Carousel with Avatars,"Customer quotes cycle automatically, each paired with a face."
+223,Emotion Gauge Chart,Half‑circle gauge with emojis labeling “Sad ↔ Happy” scale.
+224,Water Ripple Hero,Hero background simulates gentle water ripples for calming effect.
+225,Glassy Modal Overlay,"Frosted, semi‑transparent modal window that floats above dimmed content."
+226,Scrolling Story Hero,"Hero that expands into a full‑screen narrative as the user scrolls, gradually revealing new text layers."
+227,Diagonal Split Feature,"Cuts the section background diagonally, placing text on one color and image on another for bold contrast."
+228,Full‑Bleed Image With Pull‑Quote,"A wide image where a large quote overlays the center, perfect for editorial storytelling."
+229,Three‑Step CTA Strip,Horizontally lists “Step 1 → 2 → 3” with icons and a final action button to guide conversions.
+230,Comparison Matrix (10×3),"Large grid comparing up to ten features across three plans with ticks, crosses, and tooltips."
+231,Sticky Comparison Column,Keeps one key plan column fixed while the rest of the pricing table scrolls horizontally.
+232,Layered Gradient Card,Card with two offset gradient layers that create a trendy depth effect.
+233,Bookmarkable Content Card,Includes a corner bookmark icon that toggles saved state without page reload.
+234,Interactive Stats Flip Tile,"On hover, the big metric flips to reveal a contextual fact or trend explanation."
+235,Countdown Timer Block,"Digital clock tiles counting down days, hours, minutes, and seconds until a launch."
+236,Circular Progress Dial,"Looks like a speedometer, filling clockwise with a needle pointing to the value."
+237,Stacked Bar Chart,"Horizontal or vertical bars showing segmented data, with legend beneath."
+238,Mini Area Chart,Soft‑filled sparkline that emphasizes trends over precise numbers.
+239,Radar (Spider) Chart Card,"Multi‑axis chart comparing attributes (e.g., speed, cost, quality) in a single polygon."
+240,Dual‑Axis Bar & Line Chart,Combines bars and a line on two axes in the same frame for richer insight.
+241,Linked KPI Chip + Sparkline,"Tiny pill with stat that, when clicked, expands into a larger chart modal."
+242,Scrollable Media Strip,Horizontal scroll of square media thumbnails with snap‑to‑scroll momentum.
+243,Panorama Image Scroll,Wide panoramic image that scrolls horizontally inside a fixed‑height frame.
+244,360‑Degree Product Viewer,Users drag left/right on the image to spin the product for full inspection.
+245,Sound Wave Audio Embed,Visual waveform player with progress scrubber for podcasts or music clips.
+246,Responsive Iframe Wrapper,"Maintains 16:9 or 4:3 aspect ratio for any embedded content (maps, videos)."
+247,Media Lightbox With Info Panel,"Lightbox that opens an image/video alongside title, description, and actions."
+248,Masonry “Pinterest” Board,Board‑style layout where cards of varying height fit tightly without gaps.
+249,Shimmer Loading Card,Animated gradient shimmer placeholder mimicking content shape during load.
+250,Empty State Illustration Block,Displays friendly SVG art plus message and CTA when there’s no data yet.
+251,Locked Content Overlay,Blurs section and shows padlock icon with a prompt to sign up or upgrade.
+252,Inline Spoiler Toggle,Hides text behind a gray blur that clears when the user clicks “Reveal.”
+253,Hover Reveal List Item,List item shows summary; hovering reveals hidden details or actions.
+254,Accordion with Icon Indicators,Each panel header rotates a chevron and switches iconography when expanded.
+255,Tab Strip With Badge Counters,"Tabs show small notification badges (e.g., “3”) to indicate unread items."
+256,Flip‑Out Panel,"Content block that swings out from one edge on hover, exposing hidden info."
+257,Tree Table (Expandable Rows),Data table where rows can expand into sub‑rows—great for hierarchies.
+258,Sticky Column Table,Keeps the first column visible while the rest scrolls horizontally.
+259,Virtualized Data Grid,"Renders only visible rows for massive datasets, ensuring smooth scrolling."
+260,Inbox Conversation List,"Two‑line list items with avatar, subject, preview text, and timestamp."
+261,Activity Feed Timeline,Vertical list of user actions with icons and relative time (“2 h ago”).
+262,Kanban Board Columns,"Drag‑and‑drop cards across “To Do, Doing, Done” lane layout."
+263,Swim‑Lane Roadmap,Horizontal timeline divided into swim‑lanes for teams or features.
+264,Journey Map,Combined timeline and sentiment graph illustrating customer emotions over steps.
+265,Gantt Strip,Simplified bar‑line showing project phases over a time axis.
+266,Status History Log,"Table of status changes with labels, user, and timestamp."
+267,Drop‑Cap Paragraph Block,Large decorative first letter that drops into the paragraph for editorial flair.
+268,Lead Paragraph Style,"Slightly larger, lighter line‑height paragraph that acts as intro before body copy."
+269,Reading‑Width Column,Constrains text to ~65 characters per line for comfortable reading.
+270,Curved Section Divider,Uses a large SVG arc between sections for organic flow.
+271,Diagonal Section Divider,Creates angular separation between blocks with contrasting background colors.
+272,Wavy SVG Footer Edge,Decorative wave at the bottom of a content section.
+273,Confetti Burst Graphic,Animated confetti emitted when a user reaches a milestone section.
+274,Corner Peel Badge,Small folded‑corner graphic on a card indicating “Beta” or discounts.
+275,Curved Badge,"Pill‑shaped badge with subtle arc, used for statuses like “Live”."
+276,Gradient Border Card,Card framed by a thin multi‑color gradient line for visual pop.
+277,Elevation Shadow Card,"Card gains larger shadow on hover, implying press‑able interaction."
+278,Avatar With Status Dot,User image overlaid by a small green/yellow/red dot for online status.
+279,Avatar Hexagon,Alternative avatar shape (hexagon) for gaming or creative sites.
+280,Group Avatar Ring,Multiple avatars inside a single ring to represent a team.
+281,Blockquote With Accent Bar,Adds a thick colored bar to the left of the quote for emphasis.
+282,Highlight Marker Text,Inline span that mimics a neon marker stroke behind important words.
+283,Code Inline Highlight,Monospaced inline code element with subtle background tint.
+284,Syntax Highlight Code Block (Dark),Preformatted code on dark theme for developer‑centric content.
+285,Collapsible Code Example,Shows runnable code sample with a hide/show toggle for readability.
+286,Inline Equation Renderer,Renders LaTeX or MathML expressions as crisp math in articles.
+287,Statistic Tile With Icon Background,"Large stat number sits over a faint, oversized icon watermark."
+288,Mini KPI Row,Displays 3‑5 tiny metric cards in a single horizontal row.
+289,Gradient Progress Bar,Fills with a multi‑color gradient rather than solid color to denote progress.
+290,Segmented Progress Tracker,Shows each task segment separately filled to track multi‑step completion.
+291,Story Card With Chapter Indicator,Card displays chapter number atop title and summary.
+292,Post Series Navigation,"Horizontal list of numbered episode links, highlighting the current one."
+293,Table of Figures,Lists figure captions and links within long‑form documentation.
+294,Interactive Glossary Term,Underlines a word; hovering shows definition tooltip.
+295,Inline Footnote Popover,Superscript number opens a small popover with citation text.
+296,Search Highlight Snippet,Emphasizes matching keywords in paragraphs when user performs on‑page search.
+297,Article Progress Side Rail,Vertical bar on the side filling as reader scrolls through headings.
+298,Floating Share Widget,Share icons that stick to the left edge of viewport while reading.
+300,Sticky CT‑A Ribbon,Slender “Try it free” ribbon that sticks to bottom once user scrolls past hero.
+301,Exit‑Intent Promo Modal,Detects cursor leaving top of viewport and slides in a last‑chance offer section.
+302,Copy‑to‑Clipboard Code Snippet,Code block with a tiny “Copy” button that copies its contents in one click.
+303,Nested Tabs (Tabs inside Tab),Second‑level tab set appears inside the active main tab for deep categorization.
+304,Collapsible Article Outline,Sidebar listing all headings that can collapse sub‑sections for navigation.
+305,Inline Quiz Question,Multiple‑choice question box embedded mid‑article with instant feedback.
+306,Content Rating Stars Widget,Lets readers rate an article 1–5 stars and shows average score.
+307,Slide‑Over Details Panel,Narrow panel slides in from the right revealing extra info without leaving the page.
+308,Drill‑Down Breadcrumb Card,Breadcrumb path appears at top of card and updates as users navigate nested items.
+309,Corner Stamp Label,Small rotated label (“Best Value”) stamped on the card’s corner.
+310,Animated Underline Link,"Underline slides in from left on hover, adding subtle flair to links."
+311,Gradient Heading Text,Large heading letters filled with a linear gradient for modern look.
+312,Curved Arrow Connector,SVG arrow curving between two blocks to illustrate flow.
+313,Stepper with Icons,"Vertical list of numbered circles connected by a line, each containing an icon."
+314,Sticky Section Anchor Icon,Small chain‑link icon appears beside headings when scrolled into view for copy‑link.
+315,Drop‑Shadow Section,Adds subtle shadow around an entire page section to create floating effect.
+316,One‑Pager Story Section,"Single screen composed of headline, supporting copy, and scroll hint arrow."
+317,Timeline Cards Horizontal Scroll,Roadmap cards arranged horizontally with snap scrolling.
+318,Gantt Strip Overlay,Transparent bars placed over calendar background for project scheduling.
+319,Swim‑Lane Release Roadmap,Multi‑row timeline dividing tasks by team or theme across months.
+320,Journey Sentiment Graph,Line graph overlay on timeline showing user satisfaction at each step.
+321,Status Change History Table,Tabular log of status transitions with colored labels and timestamps.
+322,Inline Callout Success,Green left‑border box highlighting success tips inside documentation.
+323,Inline Warning Callout,Yellow bordered block warning about common pitfalls.
+324,Inline Danger Callout,Red bordered block cautioning about critical issues.
+325,Drop‑Cap with Background Circle,First letter appears inside a colored circle overlapping paragraph text.
+326,Lead‑In Eyebrow Label,Tiny uppercase label above the section headline giving category context.
+327,Reading‑Time Badge,Shows “5‑min read” next to article title to set expectations.
+328,Author Signature Block,Stylized cursive signature image concluding a personal blog post.
+329,Figure Caption Overlay,Semi‑transparent caption bar across bottom of an image.
+330,Sidebar Pull Quote,Large quote floated right in wide articles to break up long text.
+331,Interactive Glossary List,"Click a term to expand its definition in place, closing any others open."
+332,Inline Footnote Superscript,Small number opens a tooltip with citation text on hover.
+333,Search Keyword Highlight,Automatically colors matched search terms within the article body.
+334,Table of Figures Panel,Sidebar list linking to each figure in long technical documents.
+335,Floating Social Share Column,Column of share icons sticking to viewport edge while scrolling.
+336,Sticky Progress Rail,Slim vertical bar on the right filling as reader scrolls.
+337,Animated Confetti Burst,Small confetti animation triggered when users reach the end of content.
+338,Exit‑Intent Discount Modal,"Pops a promo when cursor moves toward browser bar, reducing abandonment."
+339,Slide‑Up Newsletter Panel,"Appears at the page bottom after user scrolls halfway, asking to subscribe."
+340,Inline Emoji Reaction Bar,"Lets readers tap emoji faces to react to content (👍, ❤️, 😂)."
+341,Reading Mode Toggle,Switch between light and dark reading modes in one click.
+342,Font‑Size Resizer Buttons,Small A‑/A+ buttons to adjust article text size on the fly.
+343,Cookie Consent Banner,Low profile bar explaining cookie usage with “Accept” button.
+344,Privacy Preferences Center,"Modal letting users toggle analytics, marketing, and personalization cookies."
+345,Announcement Toast,Small pop‑up at bottom left that auto‑dismisses after a few seconds.
+346,Sticky Donate Button,"Circular donate icon sticking to page corner, opening a small payment form."
+347,Floating Table of Contents Bubble,Small movable bubble showing current section name as user scrolls.
+348,Inline Poll Widget,One‑question poll embedded in article with vote counts appearing instantly.
+350,Article Series Nav Banner,Banner at top linking to previous and next posts in a series.
+351,Related Articles Card Row,Three mini cards under an article suggesting further reading.
+352,Trending Tags Marquee,Horizontal scroll of popular topic tags that loops continuously.
+353,Interactive Bar Race Chart,Animated bars racing to the right to show changing rankings over time.
+354,Circular Packing Chart,Nested circles sized by value—great for visualizing group hierarchies.
+355,Sunburst Partition Chart,Radial treemap displaying data layers like a multi‑level pie chart.
+356,Chord Diagram,Circular diagram showing connections between categories with flowing arcs.
+357,Heatmap Calendar (Year View),Tiny squares for each day of the year shaded by activity.
+358,Leaflet Map with Popups,Interactive map where clicking a marker opens a small info card.
+359,Pan & Zoom Image Viewer,Lets users zoom into high‑resolution images and move around.
+360,Interactive Panorama Viewer,Allows dragging to look around a 360° photo.
+361,Lazy‑Load YouTube Embed,Replaces heavy iframe with an image until the play button is clicked.
+362,Auto‑Generated Audio Waveform,Generates a waveform graphic for any uploaded audio file.
+363,Picture‑in‑Picture Video,Small floating video window stays visible while users scroll elsewhere.
+364,Content Placeholder Tile,Generic gray box with dashed border used where future content will go.
+365,Shimmer Paragraph with Avatar,Combined avatar + paragraph skeleton for social posts loading state.
+366,Locked‑Premium Blurred Section,Blurs premium content with “Unlock Pro” overlay.
+367,Retry‑Action Error Card,"Error card with icon, message, and “Try again” button."
+368,Dot‑Wave Loading Animation,Dots moving in wave pattern indicating loading.
+369,Adaptive Skeleton Grid,Placeholder blocks auto‑resize based on screen size.
+370,Deferred Component Placeholder,Lightweight placeholder box swapped with real component after idle time.
+371,Interactive Rating Breakdown,"Bar chart displaying how many 5‑star, 4‑star, etc., ratings a product has."
+372,Aspect‑Ratio Preserver,Utility wrapper ensuring media keeps correct ratio across breakpoints.
+373,Blur‑Up Image Loader,Low‑res blurred image sharpens when full image finishes loading.
+374,Color‑Overlay Video Poster,Adds tinted overlay on video poster frame so white text can sit on top.
+375,Swipe‑to‑Reveal Card Stack,Mobile‑friendly card deck that users swipe away Tinder‑style.
+376,Elastic Carousel,Touch‑friendly image carousel with slight elastic bounce on ends.
+377,Spotlight Spotlight,"Darkens entire page except a circular spotlight following the cursor, used in tutorials."
+378,Glassmorphism Card,"A translucent, frosted‑glass card that lets background colors softly bleed through for a modern look."
+379,Frosted Glass Hero,Full‑width hero with a blurred glass overlay panel floating above a vivid background image.
+380,Video Hero with Form Overlay,Autoplay video background topped by a brief signup form so visitors can act immediately.
+381,Floating CTA Card,A small call‑to‑action card that hovers above the page corner as users scroll.
+382,Sticky Sidebar Stats Panel,KPI tiles remain fixed on the side while the main article scrolls.
+383,Resizable Column Table,Lets users drag column borders to widen or narrow data fields.
+384,Column Reorder Table,Users can drag a header to rearrange table columns on the fly.
+385,Histogram Chart Block,Vertical bars grouped into bins to show data distribution.
+386,Box‑and‑Whisker Chart,"Visualizes quartiles, medians, and outliers for statistical insight."
+387,Funnel Chart Widget,Tapered layers illustrating conversion drop‑offs through a process.
+388,Sankey Flow Diagram,Ribbon flows showing how quantities split and merge between stages.
+389,Polar Area Chart,Circular chart with equal‑angle spokes where slice radius encodes value.
+390,Bubble Scatter Plot,Scatter plot that sizes each dot by a third data dimension.
+391,Scatter Matrix Panel,Grid of mini scatter plots comparing every variable pair in a dataset.
+392,Violin Plot Chart,Symmetrical density plot highlighting data distribution around medians.
+393,360° Panorama Viewer,Drag‑to‑look experience for immersive panoramic photos.
+394,Image Gallery with Tag Filters,Tag buttons above the gallery instantly filter visible images.
+395,Lightbox Gallery with Thumbnails,Enlarged image view plus a strip of clickable thumbnails beneath.
+396,Video Mosaic Grid,Equal‑sized video thumbnails arranged in a responsive grid.
+397,Live Stream Embed with Chat,"Video stream on the left, real‑time chat feed docked on the right."
+398,Audio Playlist Queue,List of episodes or tracks beneath a mini audio player.
+399,Map Heat Overlay,Color gradients overlay a map to signal density or intensity.
+401,Density Dot Map,Thousands of tiny dots placed on a map to represent dispersed data points.
+402,3D Globe Data Points,Interactive spinning globe with raised spikes marking values.
+403,Geo Bubble Map,Proportional circles plotted on regions to compare magnitudes.
+404,Lottie Animation Placeholder,Lightweight looping vector animation shown while heavy content loads.
+405,Chart Skeleton Placeholder,Greyed‑out axes and bars hint at an incoming chart.
+406,Table Skeleton Rows,Faded table lines that pulse until data arrives.
+407,Skeleton Form Section,Placeholder input boxes and buttons mimicking a pending form.
+408,KPI Tile with Delta Badge,Stat number plus a tiny green ↑ or red ↓ badge indicating change.
+409,KPI Tile with Mini Progress Ring,Metric displayed inside a small circular progress indicator.
+410,Balanced Scorecard Panel,"Four linked KPI boxes—Financial, Customer, Internal, Learning—shown in one block."
+411,Multi‑KPI Progress Row,Inline row of three to five mini progress bars tracking parallel goals.
+412,Traffic Light Status Card,"Red, amber, or green indicator light signals current system status."
+413,Gradient Underline Heading,Large heading whose underline fades seamlessly across two colors.
+414,Decorative Dotted Underline Heading,Subtle dotted line under the title for a magazine‑style accent.
+415,Pattern‑Fill Drop Cap,First letter of a paragraph filled with a geometric pattern.
+416,Gradient Text Block,Line of copy whose letters gradually shift through a color spectrum.
+417,Sticky Progress Step Bar,"Narrow bar fixed to top, marking each page section as completed while scrolling."
+418,Horizontal Step Dots Tracker,Evenly spaced dots with labels that light up as users advance.
+419,Wizard Progress Header,Breadcrumb‑style header naming steps 1‑2‑3 in a multi‑page flow.
+420,Collapsible Card Accordion Stack,Vertically stacked cards that expand to reveal more content.
+421,Card Deck with Snap Scroll,Horizontally scrolling cards that snap cleanly into place.
+422,Hover Gradient Shift Card,Card background smoothly shifts colors when hovered.
+423,Tilt Parallax Image Block,"Image subtly tilts based on cursor position, adding depth."
+424,Multi‑Layer Parallax Section,Three or more background layers move at different speeds during scroll.
+425,Card with Bottom CTA Bar,Persistent button strip locked to the card’s bottom edge.

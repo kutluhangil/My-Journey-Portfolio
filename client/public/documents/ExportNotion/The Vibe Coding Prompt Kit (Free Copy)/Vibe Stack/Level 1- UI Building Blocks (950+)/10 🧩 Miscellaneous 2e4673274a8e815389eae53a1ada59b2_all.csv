@@ -1,0 +1,36 @@
+﻿Name,Description,Number
+Shadow Elevation Utility,"Pre‑set drop‑shadow classes (0, 1, 2, 4 dp) conveying raised surfaces.",22
+Vertical Divider Line,Thin line used to separate toolbar groups or sidebar columns.,8
+Hover Glow Highlight,Subtle box‑shadow glow applied on card hover to signify interactivity.,29
+Button‑Embedded Spinner,"Spinner centered inside a disabled button, indicating the click is processing.",2
+Ripple Click Effect,Material‑style ink ripple animating outward on button press.,26
+Inline Code Style Span,Monospaced text style with slight background—used inside prose.,32
+Drag Handle Grip,Six‑dot icon indicating a draggable element in lists or cards.,20
+Glassmorphism Background Blur,Semi‑transparent backdrop‑filter panel for modern frosted‑glass look.,23
+Status Dot (Online/Offline),"Green, yellow, red dot next to avatars indicating presence.",13
+Inline Loading Spinner,Small circular spinner that replaces a button label or sits beside text while an action runs.,1
+Confetti Celebration Canvas,Tiny canvas effect that bursts confetti on success events.,25
+Indeterminate Progress Bar,Animated stripe that moves left‑to‑right when the exact progress percentage is unknown.,3
+Decorative Corner Ribbon,Folded corner graphic on a card for labels like “Beta”.,15
+Avatar Placeholder Initials,Auto‑generated circle with user initials when no photo exists.,18
+Empty‑State Illustration Bank,"Library of friendly SVGs (folder, magnifier, rocket) mapped to common empty states.",30
+Divider With Text Label,Horizontal rule with a small centered word like “OR”.,7
+Tooltip Arrow Pointer,Re‑usable arrow svg that attaches to any tooltip/popover edge.,28
+Notification Dot Badge,Tiny red circle (often 8 px) applied to an icon to signal unread items.,11
+User Presence Ring,"Colored ring wrapping an avatar, indicating active voice/video status.",19
+Micro Dot Pulse Loader,Three 4 px dots fading sequentially—fits inside compact UI like badges.,5
+Gradient Background Block,"Full‑width, responsive gradient section wrapper.",24
+Scroll‑to‑Anchor Smooth Link,Utility link that animates smooth scrolling rather than jumping.,34
+Thumbnail Placeholder Icon,"Generic file‑type icons (PDF, DOC, IMG) shown before real thumbnail renders.",31
+Clipboard Copy Button,Tiny button beside text blocks that copies content with feedback tooltip.,33
+Print‑Only Watermark Component,Faint diagonal watermark text that appears only in @media print styles.,35
+Label Chip (Lozenge),"Non‑interactive pill used as inline metadata (e.g., “Pro”, “Draft”).",16
+Status Tag (Success / Warning / Error),"Small pill with colored background labeling state—“Success”, “Failed”.",14
+Section Spacer Block,Utility component adding consistent top/bottom padding between major sections.,10
+Shake Animation (Error),Short shake applied to modal or field on invalid submission.,27
+Handle Resize Corner,Diagonal grip icon in bottom‑right of resizable panels.,21
+Color Swatch Sample,Square or circle showing a theme color with hex code caption.,17
+Page Skeleton Header,Grey bar that mimics a page title while content is fetched.,6
+Numeric Counter Badge,Pill overlay displaying “7+” unread count on nav or tab icons.,12
+Inset Card Divider,"Light border line indented from card edges, segmenting card sections.",9
+Annular Indeterminate Spinner,Continuous ring (no endpoint) used for background tasks of unknown length.,4

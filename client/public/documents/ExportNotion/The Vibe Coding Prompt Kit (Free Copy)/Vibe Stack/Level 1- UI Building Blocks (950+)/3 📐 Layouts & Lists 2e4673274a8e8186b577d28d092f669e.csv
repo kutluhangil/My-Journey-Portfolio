@@ -1,0 +1,81 @@
+﻿#,UI Name,Description
+1,Two‑Column Grid,A simple side‑by‑side layout that splits the screen into equal halves.
+2,Three‑Column Grid,"Divides content into three equal vertical columns, perfect for feature overviews."
+3,Four‑Column Grid,A responsive grid of four equal blocks that collapse gracefully on small screens.
+4,Responsive Masonry Grid,Tiles of varying heights that pack tightly without gaps—ideal for image galleries.
+5,12‑Span CSS Grid,A row containing twelve equal grid units so items can span custom widths.
+6,Center‑Aligned Container,A fixed‑width wrapper that keeps content centered with equal margins on large screens.
+7,Full‑Width Fluid Container,"Stretches edge‑to‑edge, resizing smoothly across any viewport."
+8,Split‑Screen Layout,"Left half for media, right half for text—often used on landing pages."
+9,Stacked Layout,"Sections piled vertically with generous spacing, creating a scroll‑friendly flow."
+10,Sidebar Layout (Left),A narrow navigation column on the left with a wider content pane on the right.
+11,Sidebar Layout (Right),"Content on the left, slim sidebar on the right—great for ads or related links."
+12,Fixed Sidebar Layout,Sidebar stays in view while the main content scrolls independently.
+13,Collapsible Sidebar Layout,Sidebar can shrink to icons or slide away to maximize workspace.
+14,Drawer‑Style Sidebar,Sidebar hidden off‑canvas that slides in from the edge on button click.
+15,Topbar + Content Layout,Persistent header bar with the page content scrolling beneath it.
+16,Sticky Header Layout,Header remains visible at the top even as users scroll down long pages.
+17,Sticky Footer Layout,Keeps footer docked to the bottom of the viewport when content is short.
+18,App Shell Frame,"Universal wrapper housing header, sidebar, and content slot for SPA routing."
+19,Card Grid Layout,Equal‑height cards arranged in responsive rows for product or blog previews.
+20,Equal‑Height Flex Row,Flexbox row ensuring each child fills the tallest sibling’s height.
+21,Holy Grail Layout,"Classic fixed header, fixed footer, flexible middle flanked by two sidebars."
+22,Media Object Layout,Small thumbnail on the left with text stacking on the right—used for comment lists.
+23,List Group,Vertical list with optional badges or icons for each item.
+24,Inset List,"List items set inside a soft card, giving a grouped feel."
+25,Bordered List,Each list item separated by subtle borders for clear visual breaks.
+26,Striped List,Alternating background colors improve readability for long item lists.
+27,Interactive Hover List,List items highlight and raise slightly on hover to indicate clickability.
+28,Expandable List Item,Clicking an item reveals hidden details beneath it—like an inline accordion.
+29,Ordered Number List,Sequence of items automatically numbered for steps or rankings.
+30,Bullet List with Icons,Replaces standard bullets with custom icons for stronger visual cues.
+31,Timeline List,Vertical list with dots and connecting line to display events chronologically.
+32,Inbox List Layout,"Two‑line items with avatar, subject, and timestamp—suitable for messages."
+33,Kanban Board Columns,Horizontally scrollable columns holding draggable cards for task workflows.
+34,Grid List with Captions,"Square thumbnails with titles underneath, common in video libraries."
+35,Gallery List Carousel,Horizontal list of cards that scrolls with arrow buttons or swipes.
+36,Virtualized List,"Renders only items in view, keeping long lists smooth and memory‑light."
+37,Infinite Scroll List,Automatically loads more items as the user nears the bottom.
+38,Paginated List,Breaks large sets into pages with numbered navigation links.
+39,Grouped Alphabet List,"Items sorted under sticky A‑Z headings, useful for contact directories."
+40,Table List Hybrid,"Combines table rows with richer list‑style content, like avatars and buttons."
+41,Tree List,Hierarchical list where nodes expand to reveal child items.
+42,Checklist List,Each list item includes a checkbox for task completion tracking.
+43,Reorderable Drag List,Allows users to drag items up or down to change their order.
+44,Icon Grid Menu,Square icons in a grid acting as quick‑launch shortcuts.
+45,Step Wizard Layout,Series of panels shown one at a time with “Next” and “Back” controls.
+46,Master‑Detail Split View,Left pane shows a list; selecting an item fills the right pane with details.
+47,Card Stack Layout,"Overlapping cards that users swipe or click through, deck‑style."
+48,Responsive Equal‑Ratio Grid,Squares keep their aspect ratio regardless of screen width—great for photo grids.
+49,Tile List with Badges,Tiles include small corner badges for statuses like “New” or numbers.
+50,Media Playlist List,List of audio or video tracks with play buttons and duration labels.
+51,Dashboard Grid Shell,A 4‑ or 6‑cell masonry grid sized for KPI cards and charts—ideal for analytics home screens.
+52,Split‑Pane Editor,Two resizable panes side‑by‑side (code ↔ preview or markdown ↔ render) with a draggable divider.
+53,Log Viewer Layout,Full‑width monospaced table that autoscrolls new rows into view for real‑time logs.
+54,Command‑Palette Overlay Frame,"Centered, narrow input overlay that appears above a dimmed app shell for quick command search."
+55,Side‑Rail Comment Feed,Narrow rail on the right where threaded comments stay visible while the main document scrolls.
+56,Vertical Story Reel,Mobile‑first full‑height cards that swipe vertically (TikTok/YouTube Shorts style).
+57,Swipe Card Deck (Mobile),Full‑screen cards users swipe left/right Tinder‑style—commonly used for onboarding tips.
+58,Adaptive Sidebar Tabs Layout,Sidebar turns into a top tab bar on small screens to save horizontal space.
+59,Drawer‑Stacked Layout,Multiple slide‑in drawers that can stack without covering each other—useful for nested forms.
+60,Multi‑Column Magazine Grid,Responsive two‑column (tablet) to three‑column (desktop) layout for editorial articles.
+61,Centered Modal List,Large overlay displaying a scrollable list while the background remains visible.
+62,Presentation Mode Shell,Hides headers/footers and centers content in a 16:9 frame for on‑screen demos.
+63,Pinned Sub‑Sidebar Layout,Main sidebar plus a collapsible sub‑sidebar for deep navigation hierarchies.
+64,High‑Contrast Accessibility Layout,Preset color palette and enlarged hit‑areas optimized for low‑vision users.
+65,Keyboard‑Only List Navigation,List items gain visible focus rings and arrow‑key traversal without a mouse.
+66,Media Gallery Strip + Details,Thumbnail rail at top; clicking loads large media preview and metadata below.
+67,Dense Table View,Table rows reduced in height for displaying large datasets in admin panels.
+68,Compact Kanban Mini‑Board,Three short columns meant for sidebar widgets rather than full boards.
+69,Timeline Gantt Hybrid,Vertical timeline down the left with horizontal bars depicting durations per row.
+70,Chat Split View,"Left list of conversations, right pane for active chat with sticky message input."
+71,Accordion Sidebar Menu,Sidebar groups nav links into collapsible accordion sections.
+72,Dual‑Header Table,Two stacked header rows—primary category plus secondary labels—for complex data.
+73,Sticky Column List,"First column (e.g., names) stays fixed while remaining list area scrolls horizontally."
+74,Lazy‑Load Infinite Grid,Masonry grid that fetches and appends new items only when they enter viewport.
+75,Compact Card Slider,Horizontal track of small cards with snap points—good for related products.
+76,Z‑Index Layered Layout,"Overlapping sections with intentional z‑index stacking to create depth (hero over nav, etc.)."
+77,Multi‑Step Wizard Sidebar,Sidebar shows step checklist; main area swaps content per step—great for sign‑ups.
+78,Right‑Aligned Content Layout,"Primary column anchored to the right edge, leaving whitespace on the left for asymmetry."
+79,Content + Sticky Action Bar,"Bottom‑fixed action bar (save, share) that appears once the user scrolls past hero."
+80,Full‑Viewport Scroll Snap Panels,Each section occupies 100 vh and snaps neatly as the user scrolls—ideal for pitch decks.

@@ -1,0 +1,61 @@
+﻿#,UI Name,Description
+1,Standard Modal Dialog,"Centered box with title, body, and primary/secondary buttons; background content is dimmed."
+2,Fullscreen Modal (Mobile Sheet),Slides up to cover the entire viewport—common for mobile pickers or forms.
+3,Bottom Sheet,"Panel that rises from the bottom to partial height, dismissible by swiping down."
+4,Side Drawer (Left),"Off‑canvas panel sliding in from the left, typically holding navigation or filters."
+5,Side Drawer (Right),Mirrored version sliding from the right edge—often used for carts or details.
+6,Slide‑Over Panel,Narrow fixed panel that pushes main content aside rather than overlapping it.
+7,Alert Dialog (Blocking),Small modal demanding immediate user response—“OK” or “Cancel.”
+8,Confirmation Dialog,Modal with explicit question and two balanced choices (“Delete / Keep”).
+9,Toast Notification,Brief message appearing at a corner and auto‑dismissing after a few seconds.
+10,Snackbar with Action,Bottom‑center bar showing a message plus a single action like “Undo.”
+11,Inline Tooltip,"Small label that appears on hover/focus, offering short contextual info."
+12,Popover (Click Trigger),"Card‑style bubble anchored to an element, holding richer content than a tooltip."
+13,Context Menu (Right‑Click),Compact menu near cursor with actions relevant to the clicked item.
+14,Hover Card Preview,Delayed hover reveals a mini card previewing linked content.
+15,Lightbox Image Viewer,Full‑viewport dark overlay that centers the clicked image with prev/next arrows.
+16,Video Lightbox,Similar to image lightbox but embeds a responsive video player.
+17,Inline Dropdown Menu,Small list of actions anchored under a button—closes when clicking outside.
+18,Mega Dropdown Panel,"Wide dropdown that can fit images, multi‑column links, or promotions."
+19,Date Picker Popover,"Calendar pops above input when focused, disappearing on selection."
+20,Color Picker Popover,Swatch grid or hue slider panel appearing over its trigger.
+21,Emoji Picker Dialog,Scrollable emoji grid in a small modal anchored to text input.
+22,Wizard Step Dialog,Modal that advances through multiple screens with “Next” / “Back.”
+23,Multi‑Select Drawer,Tall side drawer listing checkboxes for bulk filter selection.
+24,Zoomable Image Modal,Modal supports pinch‑zoom or scroll‑zoom on large images.
+25,Draggable Modal,Users can grab the header to reposition the dialog within viewport bounds.
+26,Resizable Modal Corner,Bottom‑right handle lets users stretch the dialog to fit more content.
+27,Nested Modal Guard,Secondary modal opens above the first with overlay stacking handled elegantly.
+28,Fullscreen Loading Overlay,Semi‑transparent layer with spinner covering entire app during async operations.
+29,Partial Loading Overlay,Dimmed overlay confined to a specific panel while it refreshes.
+30,Blocking Progress Dialog,"Centered modal with progress bar, preventing other interactions until complete."
+31,Non‑Blocking Progress Toast,Toast displaying upload or save progress without disabling the UI.
+32,Inline Validation Tooltip,"Red tooltip anchored to an input, showing the first validation error."
+33,Focus Trap Modal,Dialog that keeps keyboard focus inside until closed—critical for accessibility.
+34,Screen‑Reader‑Only Alert,Visually hidden live‑region announcing state changes for assistive tech.
+35,Exit‑Intent Promo Modal,"Appears when the cursor moves toward the browser bar, offering a last‑chance deal."
+36,Cookie Consent Banner,Low strip at bottom explaining cookies with “Accept” / “Settings” buttons.
+37,Privacy Preferences Center,"Modal with accordions for toggling analytics, marketing, and personalization cookies."
+38,Onboarding Coachmark,"Small tooltip with arrow pointing to a UI part, guiding first‑time users."
+39,Guided Tour Overlay Mask,Dark overlay highlights one element at a time with “Next” arrows.
+40,Spotlight (Focus) Overlay,Everything dims except a circular spotlight following cursor or focus target.
+41,Top Announcement Banner,A full‑width strip fixed to the top of the viewport for urgent messages like outages or launches.
+42,Sticky Validation Summary Bar,"A red bar that appears at page top after failed form submission, listing errors and linking to each field."
+43,Slide‑In Notification Center,"A narrow panel that slides from the right, stacking recent toasts in one scrollable feed."
+44,Live‑Chat Widget Bubble,Small circular button that expands into a chat window overlaying the page corner.
+45,Feedback Survey Slide‑Up,"Bottom sheet that glides up after task completion, asking users to rate or comment."
+46,Mobile Share Sheet,System‑style overlay listing social apps and actions for sharing a URL or file.
+47,Fullscreen Search Overlay,Dimmed background with a centered search input and instant results dropdown.
+48,Re‑Authentication Modal,Secure popup requesting password re‑entry before performing sensitive actions.
+49,Tabbed Modal Dialog,Modal containing its own tab bar to organize multi‑section settings.
+50,Split Media‑Form Modal,Dialog with an image or video on the left and a short form on the right.
+51,Print Preview Lightbox,Dark overlay framing a printable document preview with “Print / Cancel” buttons.
+52,PWA Install Prompt Banner,Small banner suggesting users install the web app to their device home screen.
+53,Push‑Notification Permission Dialog,Browser permission overlay requesting approval to send notifications.
+54,Connection‑Lost Overlay,Full‑screen notice with spinner and “Re‑try” button when the app detects offline status.
+55,Crash (Error Boundary) Overlay,Friendly error screen replacing the app UI when an unrecoverable exception occurs.
+56,Screen‑Recording Indicator Strip,"Thin, persistent bar at the top signaling an active recording session."
+57,Admin‑Impersonation Warning Ribbon,Diagonal ribbon across the viewport reminding admins they’re viewing as another user.
+58,License‑Expiry Countdown Modal,Timed dialog showing days left on trial or subscription with “Renew” CTA.
+59,Carousel Slide Caption Popover,"Small bubble that appears over a carousel slide, offering extra context or a link."
+60,Keyboard Shortcut Cheatsheet Overlay,"Semi‑transparent panel listing all hotkeys, invoked by pressing “?”."

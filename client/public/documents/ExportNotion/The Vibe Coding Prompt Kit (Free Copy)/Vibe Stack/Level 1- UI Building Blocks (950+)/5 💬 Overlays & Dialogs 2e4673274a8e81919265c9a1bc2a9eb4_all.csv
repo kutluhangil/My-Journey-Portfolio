@@ -1,0 +1,61 @@
+﻿UI Name,#,Description
+Connection‑Lost Overlay,54,Full‑screen notice with spinner and “Re‑try” button when the app detects offline status.
+Emoji Picker Dialog,21,Scrollable emoji grid in a small modal anchored to text input.
+Hover Card Preview,14,Delayed hover reveals a mini card previewing linked content.
+Color Picker Popover,20,Swatch grid or hue slider panel appearing over its trigger.
+Multi‑Select Drawer,23,Tall side drawer listing checkboxes for bulk filter selection.
+Slide‑In Notification Center,43,"A narrow panel that slides from the right, stacking recent toasts in one scrollable feed."
+Focus Trap Modal,33,Dialog that keeps keyboard focus inside until closed—critical for accessibility.
+Re‑Authentication Modal,48,Secure popup requesting password re‑entry before performing sensitive actions.
+PWA Install Prompt Banner,52,Small banner suggesting users install the web app to their device home screen.
+Zoomable Image Modal,24,Modal supports pinch‑zoom or scroll‑zoom on large images.
+Live‑Chat Widget Bubble,44,Small circular button that expands into a chat window overlaying the page corner.
+Nested Modal Guard,27,Secondary modal opens above the first with overlay stacking handled elegantly.
+Wizard Step Dialog,22,Modal that advances through multiple screens with “Next” / “Back.”
+Fullscreen Loading Overlay,28,Semi‑transparent layer with spinner covering entire app during async operations.
+Fullscreen Search Overlay,47,Dimmed background with a centered search input and instant results dropdown.
+Side Drawer (Left),4,"Off‑canvas panel sliding in from the left, typically holding navigation or filters."
+Standard Modal Dialog,1,"Centered box with title, body, and primary/secondary buttons; background content is dimmed."
+Mobile Share Sheet,46,System‑style overlay listing social apps and actions for sharing a URL or file.
+Carousel Slide Caption Popover,59,"Small bubble that appears over a carousel slide, offering extra context or a link."
+Blocking Progress Dialog,30,"Centered modal with progress bar, preventing other interactions until complete."
+Sticky Validation Summary Bar,42,"A red bar that appears at page top after failed form submission, listing errors and linking to each field."
+Side Drawer (Right),5,Mirrored version sliding from the right edge—often used for carts or details.
+Inline Validation Tooltip,32,"Red tooltip anchored to an input, showing the first validation error."
+Split Media‑Form Modal,50,Dialog with an image or video on the left and a short form on the right.
+Spotlight (Focus) Overlay,40,Everything dims except a circular spotlight following cursor or focus target.
+Toast Notification,9,Brief message appearing at a corner and auto‑dismissing after a few seconds.
+Exit‑Intent Promo Modal,35,"Appears when the cursor moves toward the browser bar, offering a last‑chance deal."
+Fullscreen Modal (Mobile Sheet),2,Slides up to cover the entire viewport—common for mobile pickers or forms.
+Confirmation Dialog,8,Modal with explicit question and two balanced choices (“Delete / Keep”).
+Resizable Modal Corner,26,Bottom‑right handle lets users stretch the dialog to fit more content.
+Snackbar with Action,10,Bottom‑center bar showing a message plus a single action like “Undo.”
+Push‑Notification Permission Dialog,53,Browser permission overlay requesting approval to send notifications.
+Guided Tour Overlay Mask,39,Dark overlay highlights one element at a time with “Next” arrows.
+Lightbox Image Viewer,15,Full‑viewport dark overlay that centers the clicked image with prev/next arrows.
+Screen‑Reader‑Only Alert,34,Visually hidden live‑region announcing state changes for assistive tech.
+Context Menu (Right‑Click),13,Compact menu near cursor with actions relevant to the clicked item.
+Top Announcement Banner,41,A full‑width strip fixed to the top of the viewport for urgent messages like outages or launches.
+Privacy Preferences Center,37,"Modal with accordions for toggling analytics, marketing, and personalization cookies."
+Crash (Error Boundary) Overlay,55,Friendly error screen replacing the app UI when an unrecoverable exception occurs.
+Date Picker Popover,19,"Calendar pops above input when focused, disappearing on selection."
+Onboarding Coachmark,38,"Small tooltip with arrow pointing to a UI part, guiding first‑time users."
+Slide‑Over Panel,6,Narrow fixed panel that pushes main content aside rather than overlapping it.
+Feedback Survey Slide‑Up,45,"Bottom sheet that glides up after task completion, asking users to rate or comment."
+Admin‑Impersonation Warning Ribbon,57,Diagonal ribbon across the viewport reminding admins they’re viewing as another user.
+Non‑Blocking Progress Toast,31,Toast displaying upload or save progress without disabling the UI.
+Print Preview Lightbox,51,Dark overlay framing a printable document preview with “Print / Cancel” buttons.
+Draggable Modal,25,Users can grab the header to reposition the dialog within viewport bounds.
+Mega Dropdown Panel,18,"Wide dropdown that can fit images, multi‑column links, or promotions."
+Bottom Sheet,3,"Panel that rises from the bottom to partial height, dismissible by swiping down."
+Tabbed Modal Dialog,49,Modal containing its own tab bar to organize multi‑section settings.
+Inline Dropdown Menu,17,Small list of actions anchored under a button—closes when clicking outside.
+Partial Loading Overlay,29,Dimmed overlay confined to a specific panel while it refreshes.
+Video Lightbox,16,Similar to image lightbox but embeds a responsive video player.
+Keyboard Shortcut Cheatsheet Overlay,60,"Semi‑transparent panel listing all hotkeys, invoked by pressing “?”."
+Screen‑Recording Indicator Strip,56,"Thin, persistent bar at the top signaling an active recording session."
+Inline Tooltip,11,"Small label that appears on hover/focus, offering short contextual info."
+Alert Dialog (Blocking),7,Small modal demanding immediate user response—“OK” or “Cancel.”
+Popover (Click Trigger),12,"Card‑style bubble anchored to an element, holding richer content than a tooltip."
+License‑Expiry Countdown Modal,58,Timed dialog showing days left on trial or subscription with “Renew” CTA.
+Cookie Consent Banner,36,Low strip at bottom explaining cookies with “Accept” / “Settings” buttons.
