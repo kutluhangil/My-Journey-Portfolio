@@ -8,7 +8,7 @@ export function FeaturedPosts() {
     <section className="border-t border-cream/10 py-28 md:py-40">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <SectionHeader
-          num="09"
+          num="08"
           label="The Reading Room"
           title={
             <>

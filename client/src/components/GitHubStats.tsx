@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, SectionHeader } from "@/components/ui-hotel";
 
@@ -42,7 +43,7 @@ export function GitHubStats() {
     <section className="border-t border-cream/10 py-28 md:py-40">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <SectionHeader
-          num="06"
+          num="05"
           label="The Registry"
           title={
             <>
@@ -66,7 +67,13 @@ export function GitHubStats() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.15} className="mt-12 text-center">
+        <Reveal delay={0.15} className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4 text-center">
+          <Link
+            href="/workshop"
+            className="label-mono inline-flex items-center gap-2 border-b border-brass pb-1 text-[10px] text-brass transition-colors hover:text-bright"
+          >
+            Browse every repository — live <ArrowUpRight className="h-3 w-3" />
+          </Link>
           <a
             href={`https://github.com/${githubUsername}`}
             target="_blank"

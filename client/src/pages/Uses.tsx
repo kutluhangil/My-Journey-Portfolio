@@ -50,7 +50,7 @@ export default function Uses() {
     <div className="mx-auto min-h-screen max-w-[1100px] px-6 pt-36 pb-28 md:px-10">
       <Reveal>
         <div className="mb-10 flex items-baseline gap-5">
-          <span className="label-mono text-[11px] text-brass">Nº 13</span>
+          <span className="label-mono text-[11px] text-brass">Nº 12</span>
           <span aria-hidden className="h-px flex-1 bg-cream/15" />
           <span className="label-mono text-[11px] text-dim">The Equipment List</span>
         </div>

@@ -329,6 +329,7 @@ export const navLinks = [
   { href: '/', label: 'Home', isRoute: true },
   { href: '/#about', label: 'About', isRoute: false },
   { href: '/#projects', label: 'Projects', isRoute: false },
+  { href: '/workshop', label: 'GitHub', isRoute: true },
   { href: '/#certificate', label: 'Certificate', isRoute: false },
   { href: '/blog', label: 'Blog & Notes', isRoute: true },
   { href: '/now', label: 'Now', isRoute: true },

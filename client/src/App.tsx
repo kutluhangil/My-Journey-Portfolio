@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Now from "./pages/Now";
 import Uses from "./pages/Uses";
+import Workshop from "./pages/Workshop";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
@@ -30,6 +31,7 @@ function Router() {
               <Route path="/blog" component={Blog} />
               <Route path="/now" component={Now} />
               <Route path="/uses" component={Uses} />
+              <Route path="/workshop" component={Workshop} />
               <Route component={NotFound} />
             </Switch>
           </PageTransition>

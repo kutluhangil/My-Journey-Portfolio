@@ -3,7 +3,6 @@ import { Marquee } from "@/components/Marquee";
 import { About } from "@/components/About";
 import { Timeline } from "@/components/Timeline";
 import { Projects } from "@/components/Projects";
-import { GitHubRepos } from "@/components/GitHubRepos";
 import { Skills } from "@/components/Skills";
 import { GitHubStats } from "@/components/GitHubStats";
 import { Certificate } from "@/components/Certificate";
@@ -20,7 +19,6 @@ export default function Home() {
       <About />
       <Timeline />
       <Projects />
-      <GitHubRepos />
       <Skills />
       <GitHubStats />
       <Certificate />

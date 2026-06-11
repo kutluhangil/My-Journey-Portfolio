@@ -6,7 +6,7 @@ export function Testimonials() {
     <section className="border-t border-cream/10 py-28 md:py-40">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <SectionHeader
-          num="08"
+          num="07"
           label="The Guest Reviews"
           title={
             <>
