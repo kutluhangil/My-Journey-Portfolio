@@ -6,7 +6,7 @@ export function Skills() {
     <section id="amenities" className="scroll-mt-20 border-t border-cream/10 py-28 md:py-40">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <SectionHeader
-          num="04"
+          num="05"
           label="Amenities"
           title={
             <>

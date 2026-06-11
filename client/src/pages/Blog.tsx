@@ -125,7 +125,7 @@ export default function Blog() {
     <div className="mx-auto min-h-screen max-w-[860px] px-6 pt-36 pb-28 md:px-10">
       <Reveal>
         <div className="mb-10 flex items-baseline gap-5">
-          <span className="label-mono text-[11px] text-brass">Nº 10</span>
+          <span className="label-mono text-[11px] text-brass">Nº 11</span>
           <span aria-hidden className="h-px flex-1 bg-cream/15" />
           <span className="label-mono text-[11px] text-dim">The Reading Room</span>
         </div>

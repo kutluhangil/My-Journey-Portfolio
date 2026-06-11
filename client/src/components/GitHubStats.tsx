@@ -42,7 +42,7 @@ export function GitHubStats() {
     <section className="border-t border-cream/10 py-28 md:py-40">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <SectionHeader
-          num="05"
+          num="06"
           label="The Registry"
           title={
             <>

@@ -57,7 +57,7 @@ export function Contact() {
     <section id="contact" className="scroll-mt-20 border-t border-cream/10 py-28 md:py-40">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <SectionHeader
-          num="09"
+          num="10"
           label="The Guest Book"
           title={
             <>
