@@ -1,59 +1,48 @@
-import { motion } from "framer-motion";
-
-const skillCategories = [
-  {
-    title: "Frontend",
-    skills: ["HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "React Query"]
-  },
-  {
-    title: "Backend",
-    skills: ["Node.js", "Express", "REST API", "PostgreSQL", "Drizzle ORM", "JWT Auth", "API Design"]
-  },
-  {
-    title: "Tools & Methods",
-    skills: ["Git/GitHub", "VS Code", "Figma", "Postman", "Vite", "npm", "Web Design"]
-  }
-];
+import { amenities } from "@/data/content";
+import { Reveal, SectionHeader } from "@/components/ui-hotel";
 
 export function Skills() {
   return (
-    <section className="py-32 bg-background border-t border-border/40">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-display mb-4">Technical Skills</h2>
-          <p className="text-muted-foreground font-light">
-            A focused toolkit for building modern, scalable web applications.
-          </p>
-        </motion.div>
+    <section id="amenities" className="scroll-mt-20 border-t border-cream/10 py-28 md:py-40">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-10">
+        <SectionHeader
+          num="04"
+          label="Amenities"
+          title={
+            <>
+              Every stay <em className="wonk text-brass italic">includes</em>.
+            </>
+          }
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-          {skillCategories.map((category, idx) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: idx * 0.15 }}
-            >
-              <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 border-b border-border/40 pb-4">
-                {category.title}
-              </h3>
-              <ul className="space-y-3">
-                {category.skills.map((skill) => (
-                  <li key={skill} className="text-foreground/70 font-light">
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+        <Reveal>
+          <div className="grid gap-px border border-cream/10 bg-cream/10 sm:grid-cols-2 lg:grid-cols-4">
+            {amenities.map((group) => (
+              <div key={group.heading} className="bg-ink p-8 md:p-9">
+                <h3 className="font-display text-2xl font-medium text-brass italic">
+                  {group.heading}
+                </h3>
+                <p className="label-mono mt-2 mb-7 text-[8px] text-dim">{group.sub}</p>
+                <ul className="space-y-3.5">
+                  {group.items.map((item) => (
+                    <li key={item} className="flex gap-3 text-sm font-light text-cream/75">
+                      <span aria-hidden className="pt-0.5 text-[10px] text-brass/70">
+                        ✦
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <p className="label-mono mt-12 text-center text-[9px] text-dim">
+            Room service for side projects — available on request
+          </p>
+        </Reveal>
       </div>
     </section>
   );

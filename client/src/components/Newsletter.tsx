@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Mail, ArrowRight, Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Reveal } from "@/components/ui-hotel";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
@@ -14,10 +14,10 @@ export function Newsletter() {
     if (!email) return;
 
     setIsSubmitting(true);
-    
+
     try {
       const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
-      
+
       if (!accessKey) {
         toast({
           title: "Configuration Error",
@@ -27,7 +27,7 @@ export function Newsletter() {
         setIsSubmitting(false);
         return;
       }
-      
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -71,58 +71,49 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-32 bg-background border-t border-border/40">
-      <div className="max-w-2xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-display mb-4">Stay Updated</h2>
-          <p className="text-muted-foreground font-light mb-12 text-lg">
-            Get notified when I publish new articles about development, design, and building in public.
+    <section className="border-t border-cream/10 py-24 md:py-32">
+      <div className="mx-auto max-w-2xl px-6 text-center md:px-10">
+        <Reveal>
+          <span className="label-mono text-[10px] text-brass">The Dispatch ✦ stay updated</span>
+          <h2 className="mt-6 font-display text-4xl leading-tight font-medium tracking-tight md:text-5xl">
+            Mail, delivered to
+            <br />
+            your <em className="wonk text-brass italic">room</em>.
+          </h2>
+          <p className="mt-6 text-sm leading-relaxed font-light text-dim">
+            Get notified when I publish new articles about development, design, and building in
+            public. No spam, unsubscribe anytime.
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-            <div className="flex-1 relative">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
-              <input
-                type="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-muted/30 border border-border/40 text-foreground placeholder-muted-foreground outline-none transition-all hover:bg-muted/50 focus:bg-muted/50 focus:border-foreground/20 disabled:opacity-50"
-                required
-                disabled={isSubmitting}
-                data-testid="input-email"
-              />
-            </div>
+          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isSubmitting}
+              data-testid="input-email"
+              className="flex-1 border-b border-cream/20 bg-transparent py-3.5 text-center font-light text-cream transition-colors outline-none placeholder:text-cream/25 focus:border-brass sm:text-left"
+            />
             <button
               type="submit"
               disabled={isSubmitting || subscribed}
-              className="px-6 py-3 bg-foreground text-background font-medium text-sm uppercase tracking-wider transition-all hover:bg-foreground/90 flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               data-testid="button-subscribe"
+              className="label-mono inline-flex items-center justify-center gap-2 bg-brass px-8 py-4 text-[10px] font-medium text-ink transition-colors hover:bg-bright disabled:cursor-not-allowed disabled:opacity-60"
             >
               {subscribed ? (
                 <>
-                  <Check className="w-4 h-4" />
-                  Subscribed
+                  <Check className="h-3.5 w-3.5" /> Subscribed
                 </>
               ) : (
                 <>
-                  {isSubmitting ? "Sending..." : "Subscribe"}
-                  <ArrowRight className="w-4 h-4" />
+                  {isSubmitting ? "Delivering…" : "Subscribe"} <ArrowUpRight className="h-3.5 w-3.5" />
                 </>
               )}
             </button>
           </form>
-
-          <p className="text-xs text-muted-foreground mt-6 font-light">
-            No spam, unsubscribe anytime. I respect your privacy.
-          </p>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

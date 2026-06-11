@@ -1,90 +1,136 @@
 import { motion } from "framer-motion";
-import { Link } from "wouter";
+import { AVAILABLE_FOR_WORK, profile } from "@/data/content";
+import { NeonSign, EASE } from "@/components/ui-hotel";
 
-// ✏️ AVAILABILITY CONFIG — İş aradığında true, iş bulunca false yap
-const AVAILABLE_FOR_WORK = true;
+function MaskedLine({ children, delay }: { children: React.ReactNode; delay: number }) {
+  return (
+    <span className="block overflow-hidden pb-[0.08em]">
+      <motion.span
+        className="block"
+        initial={{ y: "110%" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1.1, delay, ease: EASE }}
+      >
+        {children}
+      </motion.span>
+    </span>
+  );
+}
 
 export function Hero() {
   return (
-    <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-background">
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-        {/* subtle atmospheric noise texture */}
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full opacity-40">
-          <filter id="noiseFilter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#noiseFilter)" />
-        </svg>
+    <section
+      id="top"
+      className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 text-center"
+    >
+      {/* night: amber lamp-light pooling behind the sign · day: open sunshine */}
+      <div
+        aria-hidden
+        className="absolute top-[12%] left-1/2 hidden h-[420px] w-[680px] max-w-full -translate-x-1/2 dark:block"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgb(201 165 87 / 0.13), transparent 65%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute top-[6%] left-1/2 h-[460px] w-[760px] max-w-full -translate-x-1/2 dark:hidden"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgb(255 247 220 / 0.9), transparent 65%)",
+        }}
+      />
+
+      <div
+        aria-hidden
+        className="label-mono absolute left-8 top-1/2 hidden -translate-y-1/2 text-[9px] text-cream/25 xl:block"
+        style={{ writingMode: "vertical-rl" }}
+      >
+        Full Stack Developer ✦ Türkiye → Remote
       </div>
-      
-      <div className="z-10 max-w-5xl mx-auto px-6 text-center mt-16">
-        {/* Availability badge — AVAILABLE_FOR_WORK değişkenine göre otomatik değişir */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="inline-flex items-center gap-2 mb-10 px-4 py-2 border border-border/40 bg-muted/30 backdrop-blur-sm"
+      <div
+        aria-hidden
+        className="label-mono absolute right-8 top-1/2 hidden -translate-y-1/2 rotate-180 text-[9px] text-cream/25 xl:block"
+        style={{ writingMode: "vertical-rl" }}
+      >
+        From front desk to front-end ✦ Est. 2024
+      </div>
+
+      <div className="relative z-10 mt-14 flex max-w-6xl flex-col items-center">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.15 }}
+          className="label-mono mb-10 text-[10px] text-dim"
         >
-          <span className="relative flex h-2 w-2">
-            {AVAILABLE_FOR_WORK ? (
-              <>
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </>
-            ) : (
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-muted-foreground" />
-            )}
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-foreground/70">
-            {AVAILABLE_FOR_WORK ? "Available for new opportunities" : "Currently not available"}
+          The portfolio of Kutluhan Gül
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.35, ease: EASE }}
+          className="mb-12 flex flex-col items-center gap-3"
+        >
+          <NeonSign on={AVAILABLE_FOR_WORK} />
+          <span className="label-mono text-[9px] text-dim">
+            {AVAILABLE_FOR_WORK
+              ? "Available for new opportunities"
+              : "Currently checked in elsewhere"}
           </span>
         </motion.div>
 
+        <h1 className="font-display text-[clamp(3.1rem,10.5vw,8.5rem)] leading-[0.95] font-medium tracking-[-0.02em]">
+          <MaskedLine delay={0.5}>From front desk</MaskedLine>
+          <MaskedLine delay={0.65}>
+            to <em className="wonk text-brass italic">front‑end</em>.
+          </MaskedLine>
+        </h1>
+
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8"
-        >
-          Full Stack Developer
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-medium text-balance leading-tight tracking-tight mb-12"
-        >
-          Building digital <span className="italic font-light">experiences</span> with precision.
-        </motion.h1>
-        
-        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          transition={{ duration: 1, delay: 1.15 }}
+          className="mt-10 max-w-2xl text-lg leading-relaxed font-light text-dim"
+        >
+          Eight years of five-star service, two and a half years inside Amazon’s
+          marketplace machinery — now shipping web applications with the same
+          standard of care.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.35, ease: EASE }}
+          className="mt-12 flex flex-col gap-4 sm:flex-row"
         >
           <a
             href="/#projects"
-            className="inline-block border border-foreground bg-foreground text-background px-8 py-4 text-xs uppercase tracking-widest hover:bg-transparent hover:text-foreground transition-all duration-500 ease-out"
+            className="label-mono bg-brass px-9 py-4 text-[11px] font-medium text-ink transition-colors hover:bg-bright"
           >
-            View Projects
+            View case studies
           </a>
-          <Link
-            href="/blog"
-            className="inline-block border border-foreground px-8 py-4 text-xs uppercase tracking-widest hover:bg-foreground hover:text-background transition-all duration-500 ease-out"
+          <a
+            href={profile.cv}
+            download
+            className="label-mono border border-cream/30 px-9 py-4 text-[11px] transition-colors hover:border-cream hover:bg-cream/5"
           >
-            Blog & Notes
-          </Link>
+            Download CV
+          </a>
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
+        transition={{ duration: 1, delay: 1.9 }}
+        className="absolute bottom-9 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-4 md:flex"
       >
-        <div className="w-[1px] h-16 bg-gradient-to-b from-foreground/50 to-transparent" />
+        <span className="label-mono text-[9px] text-cream/35">
+          <span className="dark:hidden">The terrace is this way</span>
+          <span className="hidden dark:inline">The lobby is this way</span>
+        </span>
+        <span className="h-12 w-px bg-gradient-to-b from-cream/45 to-transparent" />
       </motion.div>
     </section>
   );

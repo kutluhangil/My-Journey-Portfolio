@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Github, Users, Package } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { Reveal, SectionHeader } from "@/components/ui-hotel";
 
 interface GitHubUser {
   public_repos: number;
@@ -33,79 +33,49 @@ export function GitHubStats() {
   if (loading || !stats) return null;
 
   const metrics = [
-    {
-      icon: Package,
-      number: stats.public_repos,
-      label: "Public Repositories"
-    },
-    {
-      icon: Users,
-      number: stats.followers,
-      label: "Followers"
-    },
-    {
-      icon: Users,
-      number: stats.following,
-      label: "Following"
-    }
+    { value: stats.public_repos, label: "public repositories" },
+    { value: stats.followers, label: "followers" },
+    { value: stats.following, label: "following" },
   ];
 
   return (
-    <section className="py-32 bg-background border-t border-border/40">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="mb-16 flex items-center gap-4"
-        >
-          <Github className="w-6 h-6" />
-          <div>
-            <h2 className="text-3xl md:text-4xl font-display">GitHub Activity</h2>
-            <p className="text-muted-foreground font-light mt-2">Live stats from my GitHub profile</p>
-          </div>
-        </motion.div>
+    <section className="border-t border-cream/10 py-28 md:py-40">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-10">
+        <SectionHeader
+          num="05"
+          label="The Registry"
+          title={
+            <>
+              Signed in at <em className="wonk text-brass italic">GitHub</em>.
+            </>
+          }
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {metrics.map((metric, idx) => {
-            const Icon = metric.icon;
-            return (
-              <motion.div
-                key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="border border-border/40 p-8 hover:bg-muted/20 transition-colors"
-              >
-                <Icon className="w-6 h-6 text-muted-foreground mb-4" />
-                <div className="text-4xl md:text-5xl font-display mb-3">
-                  {metric.number}
+        <Reveal>
+          <div className="grid gap-px border border-cream/10 bg-cream/10 sm:grid-cols-3">
+            {metrics.map((metric) => (
+              <div key={metric.label} className="bg-ink p-8 md:p-10">
+                <div className="font-display text-5xl font-medium text-brass italic md:text-6xl">
+                  {metric.value}
                 </div>
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light">
+                <div className="label-mono mt-4 text-[9px] leading-[1.8] text-dim">
                   {metric.label}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-12 text-center"
-        >
+        <Reveal delay={0.15} className="mt-12 text-center">
           <a
             href={`https://github.com/${githubUsername}`}
             target="_blank"
-            className="text-xs uppercase tracking-widest border-b border-foreground/20 hover:border-foreground transition-colors pb-1 inline-flex items-center gap-2"
+            rel="noopener noreferrer"
+            className="label-mono inline-flex items-center gap-2 border-b border-cream/20 pb-1 text-[10px] transition-colors hover:border-brass hover:text-brass"
           >
-            View Profile <Github className="w-3 h-3" />
+            Visit the profile <ArrowUpRight className="h-3 w-3" />
           </a>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

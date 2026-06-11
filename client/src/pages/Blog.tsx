@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
+import { Reveal } from "@/components/ui-hotel";
 
 type Category = "All" | "Dev" | "Notes";
 
@@ -35,8 +36,8 @@ const staticPosts = [
         <p>I successfully passed all exams and earned this certificate.</p>
         <p>In addition to the program, I also developed 8 personal projects during this period, which I'll be sharing gradually.</p>
         <p>You can check my work here:<br />
-          🔗 <a href="https://github.com/kutluhangil" className="underline hover:text-foreground">https://github.com/kutluhangil</a><br />
-          🔗 <a href="https://www.kutluhangul.com/" className="underline hover:text-foreground">https://www.kutluhangul.com/</a>
+          🔗 <a href="https://github.com/kutluhangil" className="underline decoration-brass/40 underline-offset-4 hover:decoration-brass">https://github.com/kutluhangil</a><br />
+          🔗 <a href="https://www.kutluhangul.com/" className="underline decoration-brass/40 underline-offset-4 hover:decoration-brass">https://www.kutluhangul.com/</a>
         </p>
         <p>(My portfolio website is also one of the projects I built — you can explore my work there in detail.)</p>
         <p>Throughout this journey, I also improved my English by completing additional training focused on understanding and using technical terms in software development.</p>
@@ -112,8 +113,6 @@ const staticPosts = [
   },
 ];
 
-import { useState } from "react";
-
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
 
@@ -123,79 +122,85 @@ export default function Blog() {
       : staticPosts.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1 className="text-4xl md:text-6xl font-display mb-4">Blog & Notes</h1>
-        <p className="text-muted-foreground text-lg font-light mb-12 leading-relaxed">
+    <div className="mx-auto min-h-screen max-w-[860px] px-6 pt-36 pb-28 md:px-10">
+      <Reveal>
+        <div className="mb-10 flex items-baseline gap-5">
+          <span className="label-mono text-[11px] text-brass">Nº 10</span>
+          <span aria-hidden className="h-px flex-1 bg-cream/15" />
+          <span className="label-mono text-[11px] text-dim">The Reading Room</span>
+        </div>
+        <h1 className="font-display text-[clamp(2.6rem,6.5vw,5rem)] leading-[1.02] font-medium tracking-tight">
+          Blog &amp; <em className="wonk text-brass italic">Notes</em>.
+        </h1>
+        <p className="mt-6 max-w-xl leading-relaxed font-light text-dim">
           Sharing my journey, technical notes, and project breakdowns.
         </p>
+      </Reveal>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap gap-3 mb-16 border-b border-border/40 pb-8">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-[10px] uppercase tracking-widest border transition-all duration-300 ${
-                activeCategory === cat
-                  ? "bg-foreground text-background border-foreground"
-                  : "border-border/40 text-muted-foreground hover:border-foreground/40 hover:text-foreground"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-16"
+      {/* Category filter */}
+      <div className="rule-double mt-14 flex flex-wrap gap-3 pt-8 pb-4">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`label-mono cursor-pointer border px-4 py-2 text-[9px] transition-colors ${
+              activeCategory === cat
+                ? "border-brass bg-brass text-ink"
+                : "border-cream/20 text-dim hover:border-brass/50 hover:text-brass"
+            }`}
           >
-            {filtered.length === 0 ? (
-              <p className="text-muted-foreground font-light py-20 text-center">
-                No posts in this category yet.
-              </p>
-            ) : (
-              filtered.map((post) => (
-                <article key={post.id} className="group border-b border-border/40 pb-16 last:border-0">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-[10px] tracking-widest uppercase px-2 py-1 border border-border/40 bg-muted/30">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
-                    <span className="text-xs text-muted-foreground/60">{post.readTime}</span>
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-display mb-4 hover:text-muted-foreground transition-colors cursor-pointer">
-                    {post.title}
-                  </h2>
-                  <div className="text-foreground/70 font-light leading-relaxed mb-6 space-y-4">
-                    {post.excerpt}
-                  </div>
-                  {/* "Read More" — Yazı henüz hazır değil, yakında eklenecek */}
-                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground/40 cursor-not-allowed select-none border-b border-muted/20 pb-1">
-                    Coming Soon
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeCategory}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.35 }}
+          className="mt-12 space-y-16"
+        >
+          {filtered.length === 0 ? (
+            <p className="label-mono py-20 text-center text-[10px] text-dim">
+              No posts in this category yet.
+            </p>
+          ) : (
+            filtered.map((post) => (
+              <article
+                key={post.id}
+                className="group border-b border-cream/10 pb-16 last:border-0"
+              >
+                <div className="mb-5 flex flex-wrap items-center gap-4">
+                  <span className="label-mono border border-brass/40 px-2.5 py-1 text-[8px] text-brass">
+                    {post.category}
                   </span>
-                </article>
-              ))
-            )}
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
+                  <span className="label-mono text-[9px] text-dim">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+                  <span className="label-mono text-[9px] text-dim/60">{post.readTime}</span>
+                </div>
+                <h2 className="mb-5 font-display text-3xl leading-snug font-medium tracking-tight transition-colors group-hover:text-brass md:text-4xl">
+                  {post.title}
+                </h2>
+                <div className="space-y-4 leading-relaxed font-light text-cream/70">
+                  {post.excerpt}
+                </div>
+                {/* "Read More" — Yazı henüz hazır değil, yakında eklenecek */}
+                <span className="label-mono mt-7 inline-block cursor-not-allowed border-b border-cream/10 pb-1 text-[9px] text-dim/50 select-none">
+                  Full story — coming soon
+                </span>
+              </article>
+            ))
+          )}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

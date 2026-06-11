@@ -1,48 +1,22 @@
-import { motion } from "framer-motion";
+import { stats } from "@/data/content";
+import { Reveal } from "@/components/ui-hotel";
 
-const stats = [
-  {
-    number: "2.5+",
-    label: "Years in Tech"
-  },
-  {
-    number: "10+",
-    label: "Projects Built"
-  },
-  {
-    number: "8+",
-    label: "Years Professional"
-  },
-  {
-    number: "∞",
-    label: "Coffee Consumed"
-  }
-];
-
+/** The ledger row — four figures that summarize the stay so far. */
 export function Statistics() {
   return (
-    <section className="py-32 bg-background border-t border-border/40">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat, idx) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
-              className="text-center md:text-left"
-            >
-              <div className="text-4xl md:text-5xl font-display text-foreground mb-3">
-                {stat.number}
-              </div>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+    <Reveal className="mt-24">
+      <div className="grid gap-px border border-cream/10 bg-cream/10 sm:grid-cols-2 lg:grid-cols-4">
+        {stats.map((stat) => (
+          <div key={stat.label} className="bg-ink p-8 md:p-10">
+            <div className="font-display text-5xl font-medium text-brass italic md:text-6xl">
+              {stat.value}
+            </div>
+            <div className="label-mono mt-4 text-[9px] leading-[1.8] text-dim">
+              {stat.label}
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </Reveal>
   );
 }

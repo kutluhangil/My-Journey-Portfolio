@@ -1,153 +1,86 @@
-import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { profile, story } from "@/data/content";
+import { Reveal, SectionHeader } from "@/components/ui-hotel";
+import { Statistics } from "@/components/Statistics";
 
 export function About() {
-  const skills = [
-    "HTML/CSS", "JavaScript", "React", "TypeScript", 
-    "Node.js", "REST API", "Redux", "Clean UI", 
-    "Git", "Prompt Engineering", "Vibecoding"
-  ];
-
   return (
-    <section id="about" className="py-32 md:py-48 bg-background border-t border-border/40">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="aspect-square w-full max-w-md mx-auto overflow-hidden relative group rounded-2xl"
-          >
-            <img
-              src="/images/profile-avatar.jpg"
-              alt="Kutluhan Gül"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/5 mix-blend-overlay pointer-events-none" />
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          >
-            <h2 className="text-3xl md:text-5xl font-display mb-8">
-              Kutluhan <br/><span className="italic text-muted-foreground">Gül</span>.
-            </h2>
-            <div className="space-y-6 text-foreground/70 font-light leading-relaxed text-lg mb-8">
-              <p>
-                Full Stack Developer in transition with 2.5+ years of experience as a Senior Selling Partner Support Associate at Amazon. 
-                In 2024, I made a deliberate career shift into software development to build strong technical foundations in modern web technologies.
-              </p>
-              <p>
-                Backed by 8+ years of international professional experience, including hospitality and supervisory roles in the United States, 
-                I bring strong analytical thinking, problem-solving skills, and a disciplined work ethic to every project.
-              </p>
-            </div>
+    <section id="about" className="scroll-mt-20 py-28 md:py-40">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-10">
+        <SectionHeader
+          num="01"
+          label="The Story"
+          title={
+            <>
+              Eight years of service,
+              <br />
+              <em className="wonk text-brass italic">recompiled</em>.
+            </>
+          }
+        />
 
-            <div className="mb-12">
-              <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6">Technical Skills</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill) => (
-                  <span key={skill} className="px-4 py-2 border border-border/40 text-xs uppercase tracking-widest bg-muted/30">
-                    {skill}
-                  </span>
+        <div className="grid items-start gap-16 lg:grid-cols-[5fr_7fr] lg:gap-20">
+          <Reveal className="mx-auto w-full max-w-md">
+            <div className="relative">
+              {/* echo frame behind the portrait, slightly off-register */}
+              <div
+                aria-hidden
+                className="absolute inset-0 translate-x-3 translate-y-3 rotate-[1.5deg] border border-cream/10"
+              />
+              <figure className="relative -rotate-[1.5deg] border border-brass/40 bg-ink-2 p-3 shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition-transform duration-700 hover:rotate-0 dark:shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+                <img
+                  src="/images/profile-avatar.jpg"
+                  alt="Portrait of Kutluhan Gül"
+                  className="aspect-[4/5] w-full object-cover sepia-[0.18] transition-[filter] duration-700 hover:sepia-0"
+                />
+                <figcaption className="label-mono flex items-center justify-between pt-3 text-[9px] text-dim">
+                  <span>Gül, Kutluhan</span>
+                  <span className="text-brass/80">Reg. Nº 2024</span>
+                </figcaption>
+              </figure>
+            </div>
+          </Reveal>
+
+          <div>
+            <Reveal>
+              <div className="space-y-6 text-lg leading-relaxed font-light text-cream/75">
+                {story.map((para, i) => (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "first-letter:float-left first-letter:mt-1 first-letter:mr-3 first-letter:font-display first-letter:text-6xl first-letter:leading-[0.8] first-letter:text-brass"
+                        : undefined
+                    }
+                  >
+                    {para}
+                  </p>
                 ))}
               </div>
-            </div>
-            
-            <div className="mt-12 flex flex-wrap gap-8">
-              <a href="https://linkedin.com/in/kutluhangil" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest border-b border-foreground/20 hover:border-foreground transition-colors pb-1">LinkedIn</a>
-              <a href="https://github.com/kutluhangil" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest border-b border-foreground/20 hover:border-foreground transition-colors pb-1">GitHub</a>
-              <a href="/documents/Kutluhan_Gul_Full_Stack_Developer.pdf" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest border-b border-foreground/20 hover:border-foreground transition-colors pb-1 font-medium">View Online Resume</a>
-              <a href="/documents/Kutluhan_Gul_Full_Stack_Developer.pdf" download="Kutluhan_Gul_Full_Stack_Developer.pdf" className="text-xs uppercase tracking-widest border-b border-foreground/20 hover:border-foreground transition-colors pb-1 font-medium">Download PDF</a>
-            </div>
-          </motion.div>
-        </div>
+            </Reveal>
 
-        {/* Experience & Education Grid */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-border/40 pt-16">
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-10">Work Experience</h3>
-            <div className="space-y-12">
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">Aug 2022 — Nov 2024</span>
-                <h4 className="text-xl font-display">Amazon (Remote)</h4>
-                <p className="text-sm text-foreground mb-4">Senior Selling Partner Support Associate</p>
-                <div className="text-sm font-light text-foreground/70 leading-relaxed space-y-2 border-l border-border/40 pl-4">
-                  <p>Delivered multi-channel technical support (chat, email, and phone) to over 60 active sellers across European marketplaces, including the UK.</p>
-                  <p>Resolved complex issues related to product listings, catalog errors, account health, and platform policies.</p>
-                  <p>Assisted sellers with product uploads, listing optimization, inventory management, payment processes, and troubleshooting backend system errors.</p>
-                </div>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">Sep 2021 — Aug 2022</span>
-                <h4 className="text-xl font-display">Crowne Plaza Istanbul Tuzla</h4>
-                <p className="text-sm text-foreground mb-4">Guest Service Agent</p>
-                <p className="text-sm font-light text-foreground/70 leading-relaxed border-l border-border/40 pl-4">
-                  Managed front-desk services, handling reservations, check-ins/check-outs, secure transactions, and guest inquiries to ensure a smooth and professional experience.
-                </p>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">May 2019 — Sep 2021</span>
-                <h4 className="text-xl font-display">Radisson Blu Hotel & Spa</h4>
-                <p className="text-sm text-foreground mb-4">Guest Service Agent</p>
-                <p className="text-sm font-light text-foreground/70 leading-relaxed border-l border-border/40 pl-4">
-                  Delivered front-desk operations and guest support, handling reservations, check-ins/check-outs, and payment transactions.
-                </p>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">2013 — 2016</span>
-                <h4 className="text-xl font-display">Hospitality (Work and Travel USA)</h4>
-                <p className="text-sm text-foreground mb-4">Floor Supervisor & Inspector</p>
-                <div className="text-sm font-light text-foreground/70 leading-relaxed space-y-2 border-l border-border/40 pl-4">
-                  <p>Gained hands-on experience in hospitality and retail roles in Park City, Utah (Westgate Resorts, Canyons Resort, 7-Eleven).</p>
-                  <p>Progressed to supervisory responsibilities, ensuring high standards of cleanliness, conducting inspections, and managing inventory.</p>
-                  <p>Significantly strengthened English communication skills by working directly with international guests.</p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-10">Education</h3>
-            <div className="space-y-12">
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">2025 — 2026</span>
-                <h4 className="text-xl font-display">IT School GoIT</h4>
-                <p className="text-sm text-foreground/70">Full Stack Developer Program</p>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">2022 — 2026</span>
-                <h4 className="text-xl font-display">Anadolu University</h4>
-                <p className="text-sm text-foreground/70">Associate's Degree in Computer Programming</p>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">2019 — 2021</span>
-                <h4 className="text-xl font-display">Anadolu University</h4>
-                <p className="text-sm text-foreground/70">Associate's Degree in Web Coding</p>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">2017 — 2019</span>
-                <h4 className="text-xl font-display">Atilim University</h4>
-                <p className="text-sm text-foreground/70">Master's Degree in Tourism and Travel Services Management</p>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <span className="text-xs text-muted-foreground mb-1 block">2009 — 2014</span>
-                <h4 className="text-xl font-display">Mustafa Kemal University</h4>
-                <p className="text-sm text-foreground/70">Bachelor's Degree in Tourism and Hotel Management</p>
-              </motion.div>
-            </div>
+            <Reveal delay={0.15} className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
+              {[
+                { href: profile.github, label: "GitHub" },
+                { href: profile.linkedin, label: "LinkedIn" },
+                { href: `mailto:${profile.email}`, label: "Email" },
+                { href: profile.cv, label: "Online Resume" },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="label-mono inline-flex items-center gap-2 border-b border-cream/20 pb-1 text-[10px] transition-colors hover:border-brass hover:text-brass"
+                >
+                  {link.label} <ArrowUpRight className="h-3 w-3" />
+                </a>
+              ))}
+            </Reveal>
           </div>
         </div>
+
+        <Statistics />
       </div>
     </section>
   );

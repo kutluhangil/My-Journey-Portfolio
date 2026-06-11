@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { BookOpen, Code2, Headphones, MapPin, Target } from "lucide-react";
+import { Reveal } from "@/components/ui-hotel";
 
 const nowItems = [
   {
@@ -34,64 +34,60 @@ const LAST_UPDATED = "April 2026";
 
 export default function Now() {
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1 className="text-4xl md:text-6xl font-display mb-4 italic">Now</h1>
-        <p className="text-muted-foreground font-light mb-16 text-lg">
-          Last updated:{" "}
-          <span className="text-foreground">{LAST_UPDATED}</span>
+    <div className="mx-auto min-h-screen max-w-[860px] px-6 pt-36 pb-28 md:px-10">
+      <Reveal>
+        <div className="mb-10 flex items-baseline gap-5">
+          <span className="label-mono text-[11px] text-brass">Nº 11</span>
+          <span aria-hidden className="h-px flex-1 bg-cream/15" />
+          <span className="label-mono text-[11px] text-dim">The Day's Programme</span>
+        </div>
+        <h1 className="font-display text-[clamp(2.6rem,6.5vw,5rem)] leading-[1.02] font-medium tracking-tight">
+          <em className="wonk text-brass italic">Now</em>.
+        </h1>
+        <p className="label-mono mt-6 text-[10px] text-dim">
+          Last updated — <span className="text-brass">{LAST_UPDATED}</span>
         </p>
+      </Reveal>
 
-        {/* Now items */}
-        <div className="space-y-12 mb-24">
-          {nowItems.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, x: -16 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="grid grid-cols-[auto_1fr] gap-6 items-start border-b border-border/40 pb-12 last:border-0"
-              >
-                <div className="flex flex-col items-center gap-2 pt-1">
-                  <Icon className="w-5 h-5 text-muted-foreground" />
-                </div>
+      <div className="rule-double mt-14 space-y-0 pt-2">
+        {nowItems.map((item, idx) => {
+          const Icon = item.icon;
+          return (
+            <Reveal key={item.label} delay={idx * 0.07}>
+              <div className="grid grid-cols-[auto_1fr] items-start gap-6 border-b border-cream/10 py-10 last:border-0">
+                <span className="mt-1 inline-flex h-10 w-10 items-center justify-center border border-brass/40 text-brass">
+                  <Icon className="h-4 w-4" />
+                </span>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
-                    {item.label}
-                  </p>
-                  <p className="text-foreground/80 font-light leading-relaxed text-lg">
+                  <p className="label-mono mb-3 text-[10px] text-brass">{item.label}</p>
+                  <p className="text-lg leading-relaxed font-light text-cream/80">
                     {item.content}
                   </p>
                 </div>
-              </motion.div>
-            );
-          })}
-        </div>
+              </div>
+            </Reveal>
+          );
+        })}
+      </div>
 
-        {/* About this page */}
-        <div className="border-t border-border/40 pt-16 space-y-4">
-          <h2 className="text-xs uppercase tracking-[0.2em] text-muted-foreground">About this page</h2>
-          <p className="text-foreground/60 font-light leading-relaxed max-w-xl">
+      <Reveal delay={0.1}>
+        <div className="rule-double mt-16 pt-10">
+          <h2 className="label-mono mb-4 text-[10px] text-dim">About this page</h2>
+          <p className="max-w-xl leading-relaxed font-light text-cream/60">
             Inspired by{" "}
             <a
               href="https://nownownow.com/about"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-b border-foreground/20 hover:border-foreground transition-colors"
+              className="underline decoration-brass/40 underline-offset-4 transition-colors hover:decoration-brass"
             >
               Derek Sivers
             </a>
-            , this is a &ldquo;Now&rdquo; page. It tells you what I&apos;m focused on at this point in my life.
-            It&apos;s a great way to stay accountable and share my current trajectory.
+            , this is a &ldquo;Now&rdquo; page. It tells you what I&apos;m focused on at this point
+            in my life. It&apos;s a great way to stay accountable and share my current trajectory.
           </p>
         </div>
-      </motion.div>
+      </Reveal>
     </div>
   );
 }

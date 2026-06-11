@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { Reveal } from "@/components/ui-hotel";
 
 // ✏️ Ekipmanlarını buraya ekle/güncelle
 const gear = [
   {
     category: "Hardware",
+    sub: "the desk itself",
     items: [
       { name: "MacBook Pro", note: "Primary development machine" },
       { name: "External Monitor", note: "For extended workspace" },
@@ -14,6 +15,7 @@ const gear = [
   },
   {
     category: "Development",
+    sub: "tools of the trade",
     items: [
       { name: "VS Code", note: "Primary code editor", url: "https://code.visualstudio.com" },
       { name: "GitHub", note: "Version control & collaboration", url: "https://github.com" },
@@ -23,6 +25,7 @@ const gear = [
   },
   {
     category: "Tools & Apps",
+    sub: "always within reach",
     items: [
       { name: "Postman", note: "API testing & documentation", url: "https://postman.com" },
       { name: "Chrome DevTools", note: "Debugging & performance profiling" },
@@ -32,6 +35,7 @@ const gear = [
   },
   {
     category: "Tech Stack",
+    sub: "the house blend",
     items: [
       { name: "React + TypeScript", note: "Frontend framework of choice" },
       { name: "Node.js + Express", note: "Backend runtime & framework" },
@@ -43,67 +47,70 @@ const gear = [
 
 export default function Uses() {
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1 className="text-4xl md:text-6xl font-display mb-4 italic">Uses</h1>
-        <p className="text-muted-foreground text-lg font-light mb-4 leading-relaxed">
+    <div className="mx-auto min-h-screen max-w-[1100px] px-6 pt-36 pb-28 md:px-10">
+      <Reveal>
+        <div className="mb-10 flex items-baseline gap-5">
+          <span className="label-mono text-[11px] text-brass">Nº 12</span>
+          <span aria-hidden className="h-px flex-1 bg-cream/15" />
+          <span className="label-mono text-[11px] text-dim">The Equipment List</span>
+        </div>
+        <h1 className="font-display text-[clamp(2.6rem,6.5vw,5rem)] leading-[1.02] font-medium tracking-tight">
+          <em className="wonk text-brass italic">Uses</em>.
+        </h1>
+        <p className="mt-6 max-w-xl leading-relaxed font-light text-dim">
           The hardware, software, and tools I use daily to build digital products.
         </p>
-        <p className="text-xs text-muted-foreground/60 font-light mb-16">
+        <p className="label-mono mt-4 text-[9px] text-dim/60">
           ✏️ This page will be updated as my setup evolves. Equipment photos coming soon.
         </p>
+      </Reveal>
 
-        <div className="space-y-20">
-          {gear.map((section, sectionIdx) => (
-            <motion.div
-              key={section.category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: sectionIdx * 0.1 }}
-            >
-              <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 border-b border-border/40 pb-4">
+      <Reveal delay={0.1} className="mt-16">
+        <div className="grid gap-px border border-cream/10 bg-cream/10 sm:grid-cols-2">
+          {gear.map((section) => (
+            <div key={section.category} className="bg-ink p-8 md:p-10">
+              <h3 className="font-display text-2xl font-medium text-brass italic">
                 {section.category}
               </h3>
+              <p className="label-mono mt-2 mb-8 text-[8px] text-dim">{section.sub}</p>
               <ul className="space-y-6">
                 {section.items.map((item) => (
-                  <li key={item.name} className="flex items-start justify-between gap-4 group">
-                    <div>
-                      <p className="text-xl font-light text-foreground/80 group-hover:text-foreground transition-colors">
-                        {item.name}
-                      </p>
-                      {item.note && (
-                        <p className="text-sm text-muted-foreground font-light mt-1">{item.note}</p>
-                      )}
+                  <li key={item.name} className="group flex items-start justify-between gap-4">
+                    <div className="flex gap-3">
+                      <span aria-hidden className="pt-1 text-[10px] text-brass/70">✦</span>
+                      <div>
+                        <p className="text-lg font-light text-cream/85 transition-colors group-hover:text-brass">
+                          {item.name}
+                        </p>
+                        {item.note && (
+                          <p className="mt-1 text-sm font-light text-dim">{item.note}</p>
+                        )}
+                      </div>
                     </div>
                     {"url" in item && item.url && (
                       <a
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground/40 hover:text-foreground transition-colors mt-1 flex-shrink-0"
                         aria-label={`Visit ${item.name}`}
+                        className="mt-1.5 flex-shrink-0 text-dim/50 transition-colors hover:text-brass"
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <ArrowUpRight className="h-4 w-4" />
                       </a>
                     )}
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
         </div>
+      </Reveal>
 
-        {/* Photo placeholder note */}
-        <div className="mt-24 border border-border/40 border-dashed p-8 text-center">
-          <p className="text-muted-foreground/60 font-light text-sm">
-            📸 Equipment photos coming soon — I'll be adding real images of my setup here.
-          </p>
-        </div>
-      </motion.div>
+      <Reveal delay={0.15}>
+        <p className="label-mono mt-14 border border-dashed border-cream/20 p-8 text-center text-[9px] leading-[2] text-dim">
+          📸 Equipment photos coming soon — I'll be adding real images of my setup here.
+        </p>
+      </Reveal>
     </div>
   );
 }

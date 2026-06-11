@@ -11,6 +11,16 @@ export default {
         sm: ".1875rem", /* 3px */
       },
       colors: {
+        // The Grand Hotel palette — ink = page surface, cream = text.
+        // RGB-triplet vars swap between day (:root) and night (.dark).
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        "ink-2": "rgb(var(--ink-2) / <alpha-value>)",
+        "ink-3": "rgb(var(--ink-3) / <alpha-value>)",
+        cream: "rgb(var(--cream) / <alpha-value>)",
+        dim: "rgb(var(--dim) / <alpha-value>)",
+        brass: "rgb(var(--brass) / <alpha-value>)",
+        bright: "rgb(var(--bright) / <alpha-value>)",
+        wine: "rgb(var(--wine) / <alpha-value>)",
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
@@ -86,6 +96,8 @@ export default {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"],
       },
       keyframes: {
         "accordion-down": {

@@ -1,74 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   THE GRAND HOTEL — day & night
+   Night: brass lamplight, neon vacancy sign, deep ink lobby.
+   Day:   sun-bleached linen, espresso ink, the morning terrace.
+   Same hotel. The light changes everything.
+   ============================================================ */
+
 @layer base {
   :root {
-    --font-sans: 'Inter', sans-serif;
-    --font-display: 'Playfair Display', serif;
+    /* ——— DAY ——— */
+    --ink: 242 234 215;        /* sun-bleached linen */
+    --ink-2: 233 222 196;
+    --ink-3: 221 206 171;
+    --cream: 43 32 19;         /* espresso ink */
+    --dim: 122 106 80;
+    --brass: 141 90 33;        /* antique bronze */
+    --bright: 107 66 17;
+    --wine: 161 67 52;
 
-    /* Pure Black & White Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Schibsted Grotesk', system-ui, sans-serif;
+    --font-mono: 'Spline Sans Mono', ui-monospace, monospace;
+    --font-sans: 'Schibsted Grotesk', system-ui, sans-serif;
+    --font-serif: 'Fraunces', Georgia, serif;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 0%;
-
-    --radius: 0rem; /* Brutalist/Minimalist sharp corners */
+    /* legacy shadcn vars (toaster, tooltip) mapped to the hotel palette */
+    --background: 40 51% 90%;
+    --foreground: 30 39% 12%;
+    --card: 41 45% 84%;
+    --card-foreground: 30 39% 12%;
+    --card-border: 33 28% 70%;
+    --popover: 41 45% 84%;
+    --popover-foreground: 30 39% 12%;
+    --popover-border: 33 28% 70%;
+    --primary: 32 62% 34%;
+    --primary-foreground: 40 51% 92%;
+    --primary-border: hsl(32 62% 28%);
+    --secondary: 39 40% 80%;
+    --secondary-foreground: 30 39% 12%;
+    --secondary-border: hsl(33 28% 70%);
+    --muted: 39 40% 80%;
+    --muted-foreground: 33 21% 40%;
+    --muted-border: hsl(33 28% 70%);
+    --accent: 32 62% 34%;
+    --accent-foreground: 40 51% 92%;
+    --accent-border: hsl(32 62% 28%);
+    --destructive: 8 51% 42%;
+    --destructive-foreground: 40 51% 92%;
+    --destructive-border: hsl(8 51% 36%);
+    --border: 33 28% 68%;
+    --input: 33 28% 60%;
+    --ring: 32 62% 34%;
+    --radius: 0rem;
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 100%;
+    /* ——— NIGHT ——— */
+    --ink: 14 12 9;            /* lobby after midnight */
+    --ink-2: 21 18 13;
+    --ink-3: 30 26 18;
+    --cream: 235 226 207;
+    --dim: 156 144 128;
+    --brass: 201 165 87;
+    --bright: 236 202 124;
+    --wine: 161 67 52;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 100%;
+    --background: 36 22% 5%;
+    --foreground: 43 41% 87%;
+    --card: 38 24% 7%;
+    --card-foreground: 43 41% 87%;
+    --card-border: 42 25% 18%;
+    --popover: 38 24% 7%;
+    --popover-foreground: 43 41% 87%;
+    --popover-border: 42 25% 18%;
+    --primary: 41 51% 56%;
+    --primary-foreground: 36 22% 5%;
+    --primary-border: hsl(41 51% 48%);
+    --secondary: 40 25% 12%;
+    --secondary-foreground: 43 41% 87%;
+    --secondary-border: hsl(42 25% 20%);
+    --muted: 40 25% 11%;
+    --muted-foreground: 38 12% 55%;
+    --muted-border: hsl(42 25% 20%);
+    --accent: 41 51% 56%;
+    --accent-foreground: 36 22% 5%;
+    --accent-border: hsl(41 51% 48%);
+    --destructive: 8 51% 48%;
+    --destructive-foreground: 43 41% 90%;
+    --destructive-border: hsl(8 51% 40%);
+    --border: 42 25% 18%;
+    --input: 42 25% 24%;
+    --ring: 41 51% 56%;
   }
 }
 
@@ -76,47 +101,142 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground antialiased selection:bg-foreground selection:text-background;
-    font-family: var(--font-sans);
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+
+  html {
+    scroll-behavior: smooth;
   }
 
-  /* Hide native cursor for custom cursor — only on non-touch devices */
-  @media (pointer: fine) {
-    *, *::before, *::after {
-      cursor: none !important;
-    }
+  body {
+    @apply bg-ink text-cream font-body antialiased;
+    /* day: morning sun pouring over the terrace */
+    background-image:
+      radial-gradient(ellipse 75% 55% at 50% -12%, rgb(255 248 224 / 0.85), transparent 70%),
+      radial-gradient(ellipse 55% 35% at 85% 0%, rgb(176 196 198 / 0.28), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 50% 112%, rgb(141 90 33 / 0.10), transparent 70%);
+    background-attachment: fixed;
+  }
+
+  /* night: amber lamp pools above and below the lobby */
+  .dark body {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgb(201 165 87 / 0.07), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 50% 110%, rgb(201 165 87 / 0.04), transparent 70%);
+  }
+
+  ::selection {
+    background: rgb(var(--brass));
+    color: rgb(var(--ink));
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--brass) / 0.35) transparent;
+  }
+
+  :focus-visible {
+    outline: 1px solid rgb(var(--brass));
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .label-mono {
+    font-family: var(--font-mono);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
   }
-  
-  /* Minimalist form input overrides */
-  .editorial-input {
-    @apply bg-transparent border-0 border-b border-foreground/20 rounded-none px-0 py-3 
-           focus:outline-none focus:ring-0 focus:border-foreground focus-visible:ring-0
-           placeholder:text-muted-foreground transition-colors duration-300 w-full;
+
+  .wonk {
+    font-variation-settings: 'SOFT' 50, 'WONK' 1;
+  }
+
+  /* double pinstripe rule, like the lines on hotel stationery */
+  .rule-double {
+    position: relative;
+    border-top: 1px solid rgb(var(--cream) / 0.18);
+  }
+  .rule-double::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgb(var(--cream) / 0.1);
   }
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
+/* one tired neon letter, the way every honest motel sign has */
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  3% { opacity: 0.3; }
+  6% { opacity: 1; }
+  7% { opacity: 0.4; }
+  8% { opacity: 1; }
+  44% { opacity: 1; }
+  46% { opacity: 0.2; }
+  48% { opacity: 1; }
+  81% { opacity: 1; }
+  82% { opacity: 0.5; }
+  84% { opacity: 1; }
+}
+
+@keyframes bell-ring {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-12deg); }
+  45% { transform: rotate(9deg); }
+  60% { transform: rotate(-6deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.neon-flicker {
+  animation: neon-flicker 5s step-end infinite;
+}
+
+.bell-hover:hover .bell-icon {
+  animation: bell-ring 0.7s ease-in-out;
+}
+
+.pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 10px;
+  background: rgb(var(--brass) / 0.4);
 }
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.5);
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track,
+  .neon-flicker,
+  .pulse-soft,
+  .bell-hover:hover .bell-icon {
+    animation: none;
+  }
 }

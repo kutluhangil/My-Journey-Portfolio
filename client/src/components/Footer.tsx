@@ -1,34 +1,45 @@
+import { profile } from "@/data/content";
+
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background/60 py-12 border-t border-background/10">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-sm font-light">
-          &copy; {new Date().getFullYear()} Kutluhan Gül. All rights reserved.
-        </p>
-        
-        <div className="flex items-center gap-6">
-          <a
-            href="https://linkedin.com/in/kutluhangil"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-light hover:text-background transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/kutluhangil"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-light hover:text-background transition-colors"
-          >
-            GitHub
-          </a>
-          <a
-            href="mailto:kutluhangil@gmail.com"
-            className="text-sm font-light hover:text-background transition-colors"
-          >
-            Email
-          </a>
+    <footer className="pb-10 pt-6">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-10">
+        <div className="rule-double pt-10" />
+        <div className="grid items-center gap-8 md:grid-cols-3">
+          <div>
+            <span className="font-display text-lg italic">
+              K.Gül <span className="text-brass not-italic">✦</span>
+            </span>
+            <p className="label-mono mt-2 text-[8px] text-dim">From front desk to front‑end</p>
+          </div>
+
+          <p className="label-mono text-[8px] leading-[2] text-dim md:text-center">
+            © {new Date().getFullYear()} Kutluhan Gül
+            <br />
+            Built by hand. No template.
+          </p>
+
+          <div className="label-mono flex gap-7 text-[9px] md:justify-end">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-brass"
+            >
+              GitHub
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-brass"
+            >
+              LinkedIn
+            </a>
+            <a href={`mailto:${profile.email}`} className="transition-colors hover:text-brass">
+              Email
+            </a>
+          </div>
         </div>
       </div>
     </footer>
