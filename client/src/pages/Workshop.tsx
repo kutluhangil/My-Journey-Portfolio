@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
+import { Link } from "wouter";
 import { AnimatePresence, motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowUpRight, Github, Plus, Search, X } from "lucide-react";
+import { ArrowUpRight, FileText, Github, Plus, Search, Star, X } from "lucide-react";
 import { Reveal, EASE } from "@/components/ui-hotel";
+import { Logbook } from "@/components/Logbook";
 
 /**
  * The Workshop — every public repo, pulled live from the GitHub API
@@ -272,11 +274,17 @@ function RepoRow({ repo }: { repo: Repo }) {
               </div>
 
               <div className="flex flex-wrap gap-7 border-t border-cream/10 pt-6">
+                <Link
+                  href={`/workshop/${repo.name}`}
+                  className="label-mono inline-flex items-center gap-2 border-b border-brass pb-1 text-[10px] text-brass transition-colors hover:text-bright"
+                >
+                  <FileText className="h-3.5 w-3.5" /> Open full case file
+                </Link>
                 <a
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="label-mono inline-flex items-center gap-2 border-b border-brass pb-1 text-[10px] text-brass transition-colors hover:text-bright"
+                  className="label-mono inline-flex items-center gap-2 border-b border-cream/20 pb-1 text-[10px] transition-colors hover:border-brass hover:text-brass"
                 >
                   <Github className="h-3.5 w-3.5" /> View on GitHub
                 </a>
@@ -310,6 +318,24 @@ export default function Workshop() {
   const [search, setSearch] = useState("");
   const [lang, setLang] = useState<string>("All");
   const [sort, setSort] = useState<SortKey>("recent");
+
+  // Manager's picks — top 3 by a simple blend of stars, freshness and polish
+  const featured = useMemo(() => {
+    if (!repos || repos.length < 4) return [];
+    const now = Date.now();
+    const score = (r: Repo) => {
+      const ageDays = (now - +new Date(r.pushed_at)) / 86_400_000;
+      const freshness = Math.max(0, 30 - ageDays / 12); // recent pushes rank up
+      return (
+        r.stargazers_count * 6 +
+        freshness +
+        (r.description ? 4 : 0) +
+        (r.homepage ? 4 : 0) +
+        (r.topics?.length ?? 0)
+      );
+    };
+    return [...repos].sort((a, b) => score(b) - score(a)).slice(0, 3);
+  }, [repos]);
 
   // languages present across the register, by frequency
   const languages = useMemo(() => {
@@ -391,10 +417,60 @@ export default function Workshop() {
         </div>
       </Reveal>
 
+      {/* manager's picks — auto-selected highlights */}
+      {featured.length > 0 && (
+        <Reveal delay={0.12}>
+          <div className="mt-16">
+            <div className="mb-6 flex items-baseline gap-5">
+              <Star className="h-3.5 w-3.5 translate-y-0.5 text-brass" />
+              <span className="label-mono text-[11px] text-dim">Manager's Picks</span>
+              <span aria-hidden className="h-px flex-1 bg-cream/15" />
+            </div>
+            <div className="grid gap-px border border-cream/10 bg-cream/10 md:grid-cols-3">
+              {featured.map((repo) => (
+                <Link
+                  key={repo.id}
+                  href={`/workshop/${repo.name}`}
+                  className="group flex flex-col bg-ink p-7 transition-colors duration-300 hover:bg-ink-2"
+                >
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="label-mono text-[8px] text-brass">Recommended</span>
+                    {repo.stargazers_count > 0 && (
+                      <span className="label-mono text-[8px] text-brass/80">✦ {repo.stargazers_count}</span>
+                    )}
+                  </div>
+                  <h3 className="font-display text-2xl font-medium tracking-tight break-all transition-colors group-hover:text-brass">
+                    {repo.name}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed font-light text-dim">
+                    {repo.description ?? "No description on file — yet."}
+                  </p>
+                  <div className="label-mono mt-6 flex items-center justify-between border-t border-cream/10 pt-4 text-[8px] text-dim">
+                    <span className="flex items-center gap-1.5">
+                      {repo.language && (
+                        <span
+                          aria-hidden
+                          className="inline-block h-1.5 w-1.5 rounded-full"
+                          style={{ background: langColor(repo.language) }}
+                        />
+                      )}
+                      {repo.language ?? "—"}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 text-brass transition-colors group-hover:text-bright">
+                      Case file <ArrowUpRight className="h-3 w-3" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      )}
+
       {/* the front desk — search, filter, sort */}
       {repos && repos.length > 0 && (
         <Reveal delay={0.15}>
-          <div className="mt-12 space-y-6">
+          <div className="mt-14 space-y-6">
             {/* search */}
             <div className="relative">
               <Search className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-dim" />
@@ -534,6 +610,9 @@ export default function Workshop() {
           </>
         )}
       </div>
+
+      {/* a year of activity, logged like an occupancy register */}
+      {repos && <Logbook />}
     </div>
   );
 }

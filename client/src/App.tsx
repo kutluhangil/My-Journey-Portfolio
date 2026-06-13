@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Switch, Route, useLocation } from "wouter";
 import { AnimatePresence } from "framer-motion";
 import { ConciergeBell } from "lucide-react";
@@ -11,6 +12,7 @@ import Blog from "./pages/Blog";
 import Now from "./pages/Now";
 import Uses from "./pages/Uses";
 import Workshop from "./pages/Workshop";
+import WorkshopRepo from "./pages/WorkshopRepo";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
@@ -19,6 +21,11 @@ import { Grain } from "@/components/ui-hotel";
 
 function Router() {
   const [location] = useLocation();
+
+  // start each route at the top — unless it's a hash anchor into a section
+  useEffect(() => {
+    if (!window.location.hash) window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -32,6 +39,7 @@ function Router() {
               <Route path="/now" component={Now} />
               <Route path="/uses" component={Uses} />
               <Route path="/workshop" component={Workshop} />
+              <Route path="/workshop/:name" component={WorkshopRepo} />
               <Route component={NotFound} />
             </Switch>
           </PageTransition>
