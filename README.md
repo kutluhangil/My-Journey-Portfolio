@@ -35,10 +35,6 @@ Toggle the light and the sun actually rises or sets across the screen — stars 
 <img src="docs/screenshots/03-hero-day.png" alt="Day — the terrace" width="49%" />
 <br />
 <em>Same hotel, two worlds — night (left) and day (right).</em>
-<br /><br />
-<img src="docs/screenshots/02-daynight-transition.png" alt="Sunrise transition" width="80%" />
-<br />
-<em>The day/night cycle mid-flight — the sun crossing the horizon.</em>
 </div>
 
 ---
