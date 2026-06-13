@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowUpRight, Github, Plus } from "lucide-react";
+import { ArrowUpRight, Github, Plus, Search, X } from "lucide-react";
 import { Reveal, EASE } from "@/components/ui-hotel";
 
 /**
  * The Workshop — every public repo, pulled live from the GitHub API
  * on each visit. Push a new repo and it appears here; no deploy needed.
- * Rows expand into a full case card: description, language mix, topics.
+ * Search / filter by language / sort up top; each row expands into a
+ * case file: README excerpt, language mix, topics, dates and links.
  */
 
 const GITHUB_USERNAME = "kutluhangil";
@@ -26,6 +27,14 @@ interface Repo {
   archived: boolean;
   topics?: string[];
 }
+
+type SortKey = "recent" | "stars" | "name";
+
+const SORTS: { key: SortKey; label: string }[] = [
+  { key: "recent", label: "Recently serviced" },
+  { key: "stars", label: "Most starred" },
+  { key: "name", label: "A — Z" },
+];
 
 const LANGUAGE_COLORS: Record<string, string> = {
   JavaScript: "#f1e05a",
@@ -53,13 +62,84 @@ async function fetchRepos(): Promise<Repo[]> {
   );
   if (!res.ok) throw new Error(`GitHub API ${res.status}`);
   const data: Repo[] = await res.json();
-  return data
-    .filter((r) => !r.fork)
-    .sort((a, b) => +new Date(b.pushed_at) - +new Date(a.pushed_at));
+  return data.filter((r) => !r.fork);
 }
 
 const fmtDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+
+/** Decode GitHub's base64 (with embedded newlines) as UTF-8. */
+function b64ToUtf8(b64: string) {
+  const bin = atob(b64.replace(/\s/g, ""));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder("utf-8").decode(bytes);
+}
+
+/** Strip markdown/badges down to a readable plain-text excerpt. */
+function readmeExcerpt(md: string, maxChars = 540) {
+  let t = md;
+  t = t.replace(/<!--[\s\S]*?-->/g, ""); // html comments
+  t = t.replace(/```[\s\S]*?```/g, ""); // fenced code
+  t = t.replace(/`([^`]+)`/g, "$1"); // inline code
+  t = t.replace(/!\[[^\]]*\]\([^)]*\)/g, ""); // images
+  t = t.replace(/<img[^>]*>/gi, ""); // html images
+  t = t.replace(/<[^>]+>/g, ""); // other html tags
+  t = t.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1"); // links -> text
+  t = t.replace(/^\s*#{1,6}\s+/gm, ""); // heading markers
+  t = t.replace(/^\s*[-*+]\s+/gm, "• "); // bullets
+  t = t.replace(/[*_>#]/g, ""); // leftover emphasis/quote markers
+  t = t.replace(/\|/g, " "); // table pipes
+  t = t.replace(/^\s*:?[-=]{3,}:?\s*$/gm, ""); // rules / table dividers
+
+  const paragraphs = t
+    .split(/\n{2,}/)
+    .map((p) => p.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  let out = "";
+  for (const p of paragraphs) {
+    if (out.length + p.length > maxChars && out.length > 0) break;
+    out += (out ? "\n\n" : "") + p;
+    if (out.length >= maxChars) break;
+  }
+  if (out.length > maxChars) out = out.slice(0, maxChars).replace(/\s+\S*$/, "") + "…";
+  return out.trim();
+}
+
+/** README excerpt — fetched on first expand only. */
+function ReadmePreview({ repoName }: { repoName: string }) {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["repo-readme", repoName],
+    queryFn: async () => {
+      const res = await fetch(
+        `https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}/readme`
+      );
+      if (res.status === 404) return "";
+      if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+      const json = (await res.json()) as { content?: string };
+      return json.content ? readmeExcerpt(b64ToUtf8(json.content)) : "";
+    },
+    staleTime: Infinity,
+    retry: 0,
+  });
+
+  if (isLoading) {
+    return <p className="label-mono text-[9px] text-dim">Reading the README…</p>;
+  }
+  if (isError || !data) return null;
+
+  return (
+    <div>
+      <p className="label-mono mb-3 text-[9px] text-dim">From the README</p>
+      <div className="space-y-3 border-l-2 border-brass/40 pl-5 text-sm leading-relaxed font-light text-cream/70">
+        {data.split("\n\n").map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 /** Per-repo language mix, fetched on first expand only. */
 function LanguagesBar({ repoName }: { repoName: string }) {
@@ -120,7 +200,9 @@ function RepoRow({ repo }: { repo: Repo }) {
       >
         <span
           className={`flex h-8 w-8 flex-shrink-0 items-center justify-center border transition-all duration-300 ${
-            open ? "rotate-45 border-brass text-brass" : "border-cream/25 text-dim group-hover:border-brass/60 group-hover:text-brass"
+            open
+              ? "rotate-45 border-brass text-brass"
+              : "border-cream/25 text-dim group-hover:border-brass/60 group-hover:text-brass"
           }`}
         >
           <Plus className="h-3.5 w-3.5" />
@@ -180,6 +262,8 @@ function RepoRow({ repo }: { repo: Repo }) {
                 </div>
               )}
 
+              <ReadmePreview repoName={repo.name} />
+
               <LanguagesBar repoName={repo.name} />
 
               <div className="label-mono flex flex-wrap gap-x-8 gap-y-2 text-[9px] text-dim">
@@ -222,6 +306,45 @@ export default function Workshop() {
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
+
+  const [search, setSearch] = useState("");
+  const [lang, setLang] = useState<string>("All");
+  const [sort, setSort] = useState<SortKey>("recent");
+
+  // languages present across the register, by frequency
+  const languages = useMemo(() => {
+    if (!repos) return [];
+    const counts = new Map<string, number>();
+    for (const r of repos) {
+      if (r.language) counts.set(r.language, (counts.get(r.language) ?? 0) + 1);
+    }
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([l]) => l);
+  }, [repos]);
+
+  const visible = useMemo(() => {
+    if (!repos) return [];
+    const q = search.trim().toLowerCase();
+    const filtered = repos.filter((r) => {
+      if (lang !== "All" && r.language !== lang) return false;
+      if (!q) return true;
+      return (
+        r.name.toLowerCase().includes(q) ||
+        (r.description?.toLowerCase().includes(q) ?? false) ||
+        (r.topics?.some((t) => t.toLowerCase().includes(q)) ?? false)
+      );
+    });
+    const sorted = [...filtered];
+    if (sort === "recent") {
+      sorted.sort((a, b) => +new Date(b.pushed_at) - +new Date(a.pushed_at));
+    } else if (sort === "stars") {
+      sorted.sort((a, b) => b.stargazers_count - a.stargazers_count);
+    } else {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    return sorted;
+  }, [repos, search, lang, sort]);
+
+  const hasFilters = search.trim() !== "" || lang !== "All";
 
   return (
     <div className="mx-auto min-h-screen max-w-[1000px] px-6 pt-36 pb-28 md:px-10">
@@ -268,7 +391,90 @@ export default function Workshop() {
         </div>
       </Reveal>
 
-      <div className="mt-12">
+      {/* the front desk — search, filter, sort */}
+      {repos && repos.length > 0 && (
+        <Reveal delay={0.15}>
+          <div className="mt-12 space-y-6">
+            {/* search */}
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-dim" />
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search the register — name, description, topic…"
+                className="w-full border-b border-cream/20 bg-transparent py-3 pr-8 pl-7 font-light text-cream transition-colors outline-none placeholder:text-cream/30 focus:border-brass"
+              />
+              {search && (
+                <button
+                  onClick={() => setSearch("")}
+                  aria-label="Clear search"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 text-dim transition-colors hover:text-brass"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              {/* language filter */}
+              <div className="min-w-0">
+                <p className="label-mono mb-3 text-[8px] text-dim">Filter by language</p>
+                <div className="flex flex-wrap gap-2">
+                  {["All", ...languages].map((l) => {
+                    const active = lang === l;
+                    return (
+                      <button
+                        key={l}
+                        onClick={() => setLang(l)}
+                        className={`label-mono inline-flex items-center gap-1.5 border px-2.5 py-1.5 text-[8px] transition-colors ${
+                          active
+                            ? "border-brass bg-brass/10 text-brass"
+                            : "border-cream/15 text-dim hover:border-brass/50 hover:text-cream"
+                        }`}
+                      >
+                        {l !== "All" && (
+                          <span
+                            aria-hidden
+                            className="inline-block h-1.5 w-1.5 rounded-full"
+                            style={{ background: langColor(l) }}
+                          />
+                        )}
+                        {l}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* sort */}
+              <div className="shrink-0">
+                <p className="label-mono mb-3 text-[8px] text-dim">Sort</p>
+                <div className="flex flex-wrap gap-2">
+                  {SORTS.map((s) => {
+                    const active = sort === s.key;
+                    return (
+                      <button
+                        key={s.key}
+                        onClick={() => setSort(s.key)}
+                        className={`label-mono border px-2.5 py-1.5 text-[8px] transition-colors ${
+                          active
+                            ? "border-brass bg-brass/10 text-brass"
+                            : "border-cream/15 text-dim hover:border-brass/50 hover:text-cream"
+                        }`}
+                      >
+                        {s.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      )}
+
+      <div className="mt-10">
         {isLoading && (
           <p className="label-mono py-20 text-center text-[10px] text-dim">
             Fetching the latest from GitHub…
@@ -292,13 +498,38 @@ export default function Workshop() {
 
         {repos && (
           <>
-            <ul className="border-t border-cream/10">
-              {repos.map((repo) => (
-                <RepoRow key={repo.id} repo={repo} />
-              ))}
-            </ul>
+            {visible.length > 0 ? (
+              <ul className="border-t border-cream/10">
+                {visible.map((repo) => (
+                  <RepoRow key={repo.id} repo={repo} />
+                ))}
+              </ul>
+            ) : (
+              <p className="label-mono py-20 text-center text-[10px] leading-[2.2] text-dim">
+                No repositories match that request.
+                {hasFilters && (
+                  <>
+                    {" "}
+                    <button
+                      onClick={() => {
+                        setSearch("");
+                        setLang("All");
+                      }}
+                      className="border-b border-brass/50 pb-0.5 text-brass"
+                    >
+                      Clear the filters
+                    </button>
+                    .
+                  </>
+                )}
+              </p>
+            )}
+
             <p className="label-mono mt-12 text-center text-[9px] text-dim">
-              {repos.length} repositories on the register ✦ tap a row to open its case file
+              {hasFilters
+                ? `Showing ${visible.length} of ${repos.length} repositories`
+                : `${repos.length} repositories on the register`}{" "}
+              ✦ tap a row to open its case file
             </p>
           </>
         )}
