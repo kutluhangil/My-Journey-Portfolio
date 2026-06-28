@@ -36,7 +36,13 @@ export default async function handler(req: any, res: any) {
     }
 
     return res.status(200).json({ online: Math.max(online, 1), views });
-  } catch (err) {
-    return res.status(503).json({ error: "presence_unavailable" });
+  } catch (err: any) {
+    // TEMP diagnostics — booleans only, no secret values leaked.
+    return res.status(503).json({
+      error: "presence_unavailable",
+      detail: String(err?.message ?? err),
+      hasUrl: !!(process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL),
+      hasToken: !!(process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN),
+    });
   }
 }
