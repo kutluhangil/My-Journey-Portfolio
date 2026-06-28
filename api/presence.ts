@@ -1,9 +1,12 @@
 import { Redis } from "@upstash/redis";
 
 // Live visitor presence + total view counter.
-// Env vars (UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN) are wired
-// automatically by the Vercel Upstash integration.
-const redis = Redis.fromEnv();
+// The Vercel Upstash integration provisions KV_REST_API_URL / KV_REST_API_TOKEN
+// (falls back to the UPSTASH_* names if present).
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL ?? "",
+  token: process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN ?? "",
+});
 
 const ONLINE_KEY = "presence:online";
 const VIEWS_KEY = "stats:views";
