@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { AVAILABLE_FOR_WORK, profile } from "@/data/content";
 import { NeonSign, EASE } from "@/components/ui-hotel";
+import { LiveVisitors } from "@/components/LiveVisitors";
 
 function MaskedLine({ children, delay }: { children: React.ReactNode; delay: number }) {
   return (
@@ -118,6 +119,8 @@ export function Hero() {
             Download CV
           </a>
         </motion.div>
+
+        <LiveVisitors />
       </div>
 
       <motion.div
